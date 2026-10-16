@@ -1,0 +1,80 @@
+Studious Knight - Free-to-Play License
+
+Copyright (c) 2026 M33RK4. All rights reserved.
+
+Studious Knight (the "Game") is distributed as a ready-to-play program only.
+The Game, including its program files, code, pixel art, graphics, animations,
+maps, sounds, text, game design and all other original materials (together,
+the "Software"), is the exclusive property of M33RK4 (the "Author"). The
+source code is not published and is not part of this release. The Software is
+licensed, not sold. This license does not transfer any ownership of the
+Software to you.
+
+1. FREE TO PLAY
+
+   The Author grants you a free, personal, non-exclusive, non-transferable and
+   revocable permission to:
+
+   a) download, install and play the Game for free;
+   b) edit the question files (the "pitanja" folder) and your own save and
+      settings files for your own studying and play.
+
+2. RESTRICTIONS
+
+   Without prior written permission from the Author, you may NOT:
+
+   a) sell, rent, lease or sublicense the Software, or any copy or part of it;
+   b) charge any money or other payment for access to the Game, including
+      through paid downloads, bundles, subscriptions, paywalls or donations
+      collected in exchange for the Game;
+   c) publish, distribute or upload the Game anywhere else (for example other
+      websites, stores or file-sharing services), whether modified or not;
+      share the official download link instead;
+   d) decompile, disassemble, reverse engineer or otherwise try to obtain the
+      source code of the Game, except where applicable law expressly allows
+      this despite this restriction;
+   e) modify the program, or extract, copy or reuse its art, code or any other
+      part of it in another project, product or game, commercial or not;
+   f) claim the Software, or any part of it, as your own work, or remove or
+      change the Author's name, copyright notices or this license;
+   g) use the Software for any commercial purpose.
+
+   Forking or viewing the repository on GitHub, as allowed by GitHub's Terms
+   of Service, does not give you any rights beyond those listed in section 1.
+
+3. OWNERSHIP
+
+   The Author keeps all rights, title and interest in and to the Software,
+   including all copyrights and other intellectual property rights. Any rights
+   not expressly granted in this license are reserved by the Author.
+
+4. THIRD-PARTY COMPONENTS
+
+   The Game includes third-party components that remain the property of their
+   respective owners and are covered by their own licenses, not by this one:
+
+   - raylib (https://www.raylib.com) - zlib/libpng license
+   - "Press Start 2P" font by CodeMan38 - SIL Open Font License 1.1
+   - "VT323" font by Peter Hull - SIL Open Font License 1.1
+
+   Copies of the font licenses are included in the "licence" folder.
+   Nothing in this license limits your rights under those licenses.
+
+5. TERMINATION
+
+   This license ends automatically if you break any of its terms. When it
+   ends, you must stop using the Software and delete all copies you have.
+
+6. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+7. CONTACT
+
+   To ask for permission for anything not allowed above, contact the Author
+   through the GitHub profile that publishes the Game.
