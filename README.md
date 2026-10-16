@@ -9,6 +9,8 @@ Igra radi na bosanskom i engleskom jeziku.
 
 **Autor:** M33RK4
 
+![Vulkansko carstvo](screenshots/vulkan_andjeo.png)
+
 ## Kako pokrenuti
 
 1. Preuzmi sve fajlove iz ovog repozitorija (zeleno dugme **Code**, pa **Download ZIP**).
@@ -71,8 +73,12 @@ promaklo.
 
 ## Napredak
 
-**XP i nivoi.** Svaki tačan odgovor donosi 40 XP, a boss duplo. Djelimičan odgovor donosi dio
-toga, zavisno od toga koliko si pojmova pogodio.
+**XP i nivoi.** XP dobijaš po pitanju i svaki nivo viteza traži isto toliko XP. Ako prva tri
+nivoa pređeš savršeno, skupiš tačno dovoljno za sve oklope, a trećina pitanja te dovede otprilike
+do trećine puta. Djelimičan odgovor donosi dio XP, zavisno od toga koliko si pojmova pogodio.
+
+Igra pamti tvoj najbolji rezultat na svakom pitanju. Kad ponoviš nivo, dobiješ XP samo za ono što
+si poboljšao, a pitanje koje već znaš donosi samo 1 XP. Tako se nagrađuje ono što si novo naučio.
 
 **Oklopi.** Kako napreduješ, otključavaš nove izglede viteza na nivoima 10, 30, 60, 100 i 150.
 Kad pređeš tamnicu, dobiješ i **anđeoskog viteza** koji lebdi, ima velika krila i umjesto mača
@@ -83,6 +89,8 @@ ijedne greške, jedno kad poraziš sve bossove, a neka su skrivena.
 
 **Tajne.** U igri je sakriveno nekoliko iznenađenja. Neću ništa otkrivati, ali isplati se
 pažljivo razgledati vježbalište i glavni meni.
+
+![Neprijatelji](screenshots/neprijatelji.png)
 
 ## Svoja pitanja
 
