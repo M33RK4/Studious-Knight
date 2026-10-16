@@ -9,8 +9,6 @@ Igra radi na bosanskom i engleskom jeziku.
 
 **Autor:** M33RK4
 
-![Vulkansko carstvo](screenshots/vulkan_andjeo.png)
-
 ## Kako pokrenuti
 
 1. Preuzmi sve fajlove iz ovog repozitorija (zeleno dugme **Code**, pa **Download ZIP**).
@@ -85,8 +83,6 @@ ijedne greške, jedno kad poraziš sve bossove, a neka su skrivena.
 
 **Tajne.** U igri je sakriveno nekoliko iznenađenja. Neću ništa otkrivati, ali isplati se
 pažljivo razgledati vježbalište i glavni meni.
-
-![Neprijatelji](screenshots/neprijatelji.png)
 
 ## Svoja pitanja
 
