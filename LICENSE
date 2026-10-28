@@ -1,6 +1,6 @@
 Studious Knight - Free-to-Play License
 
-Copyright (c) 2026 M33RK4. All rights reserved.
+Copyright (c) 2026 M33RK4
 
 Studious Knight (the "Game") is distributed as a ready-to-play program only.
 The Game, including its program files, code, pixel art, graphics, animations,
@@ -30,23 +30,19 @@ Software to you.
    c) publish, distribute or upload the Game anywhere else (for example other
       websites, stores or file-sharing services), whether modified or not;
       share the official download link instead;
-   d) decompile, disassemble, reverse engineer or otherwise try to obtain the
-      source code of the Game, except where applicable law expressly allows
-      this despite this restriction;
-   e) modify the program, or extract, copy or reuse its art, code or any other
+   d) modify the program, or extract, copy or reuse its art, code or any other
       part of it in another project, product or game, commercial or not;
-   f) claim the Software, or any part of it, as your own work, or remove or
+   e) claim the Software, or any part of it, as your own work, or remove or
       change the Author's name, copyright notices or this license;
-   g) use the Software for any commercial purpose.
+   f) use the Software for any commercial purpose.
 
    Forking or viewing the repository on GitHub, as allowed by GitHub's Terms
    of Service, does not give you any rights beyond those listed in section 1.
 
 3. OWNERSHIP
 
-   The Author keeps all rights, title and interest in and to the Software,
-   including all copyrights and other intellectual property rights. Any rights
-   not expressly granted in this license are reserved by the Author.
+   The Author keeps all title and interest in and to the Software, including
+   all copyrights and other intellectual property rights.
 
 4. THIRD-PARTY COMPONENTS
 
