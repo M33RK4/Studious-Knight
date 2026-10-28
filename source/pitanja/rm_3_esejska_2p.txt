@@ -1,0 +1,432 @@
+# =====================================================================
+#  STUDIOUS KNIGHT - Računarske mreže, nivo 3: RM Esejska - 2P
+#  (druga parcijala). Izvor: "RM Esejska- 2P.docx"
+#  Format: P: pitanje / K: pojam = alternative | ... / PRAG: n / O: red odgovora / ---
+# =====================================================================
+
+P: IP adresa i IP protokol?
+K: Četiri okteta 0-255 = oktet | 0 do 255 | 0-255 | cetiri grup
+K: 32 bita = 32
+K: Jedinstvena identifikacija hosta = jedinstven | identifik
+K: Mrežni i host dio = host | mrezn dio | network
+K: Subnet maska = maska
+K: Najbolja putanja, nezavisno od medija = putanj | medij
+PRAG: 4
+O: IP adresa je niz od četiri broja 0-255 (okteta) razdvojenih tačkama; ukupno 32 bita, jedinstveno identifikuje host na mreži.
+O: Sastoji se od mrežnog (network) i host dijela, a subnet maska govori koliko bita je u network dijelu.
+O: IP protokol omogućava da se paket najkvalitetnijom putanjom isporuči do destinacije na osnovu IP zaglavlja, nezavisno od tipa medija.
+---
+
+P: IPv4?
+K: 32-bitni broj = 32
+K: 4,3 milijarde adresa = 4,3 | milijard | 4 3
+K: 1983. godina = 1983
+K: Najrašireniji protokol = rasiren | internet
+K: Mehanizmi produženja: NAT, CIDR, DHCP = nat | cidr | dhcp
+PRAG: 3
+O: IPv4 je najrašireniji IP protokol; adresa je 32-bitni binarni broj (oko 4,3 milijarde adresa), implementiran 1983.
+O: Inicijalni dizajn nije predvidio ekspanziju Interneta, pa su za bolje iskorištenje adresnog prostora osmišljeni NAT, CIDR i DHCP.
+---
+
+P: Polja IPv4 zaglavlja?
+K: Izvorišna IP adresa = izvorisn | source
+K: Destinacijska IP adresa = destinac | odredisn
+K: TTL (životni vijek) = ttl | zivotn
+K: ToS (tip usluge) = tos | tip uslug
+K: Protokol = protokol
+K: Fragment offset / MF / DF = fragment | mf | df
+PRAG: 4
+O: Izvorišna IP adresa, destinacijska IP adresa, životni vijek paketa (TTL), tip usluge (ToS), protokol, fragment offset, More Fragment (MF) i Don't Fragment (DF).
+---
+
+P: IPv6?
+K: 128-bitna adresa = 128
+K: Pojednostavljeno zaglavlje = pojednostav | jednostav | zaglavlj
+K: Veći adresni prostor = veci adresn | adresni prostor
+K: Autokonfiguracija = autokonfig | automatsk
+K: IPsec = ipsec | bezbjed | sigurn
+K: QoS / Mobile IP / multicast = qos | mobile | multicast
+PRAG: 3
+O: IPv6 je nova verzija IP protokola sa pojednostavljenim zaglavljem i 128-bitnom adresom.
+O: Osnovno zaglavlje: verzija, klasa saobraćaja, oznaka toka, dužina podataka, sljedeće zaglavlje, broj skokova, adresa izvora i odredišta.
+O: Donosi veći adresni prostor, efikasniju obradu, hijerarhijsko rutiranje, autokonfiguraciju, IPsec, bolju podršku za Mobile IP i QoS te više multicast adresa.
+---
+
+P: Pravila olakšanog adresiranja u IPv6?
+K: Početne nule se izostavljaju = pocetn | vodec | izostav
+K: Četiri nule = jedna nula = jednom nulom | jedna nula | cetiri nul
+K: "::" za uzastopna nula polja = :: | dvije dvotack | uzastopn
+K: Samo na jednom mjestu = jednom mjest | samo jednom
+PRAG: 3
+O: Početne nule u svakom polju se mogu izostaviti.
+O: Hekstet od četiri nule može se zamijeniti jednom nulom.
+O: Znak "::" zamjenjuje uzastopna polja sa nulama i može se upotrijebiti samo na jednom mjestu.
+---
+
+P: A klasa?
+K: Prvi oktet 0-127 = 0-127 | 0 do 127 | 127
+K: /8, maska 255.0.0.0 = 255.0.0.0 | /8 | 8
+K: N.H.H.H = n.h.h.h | n h h h | jedan oktet | prvi oktet
+K: 126 mreža = 126
+K: 2^24 - 2 hosta = 2^24 | 16.777 | 16777 | 24
+K: Privatne 10.0.0.0/8 = 10.0.0.0 | 10/8
+PRAG: 3
+O: Prvi oktet je u rangu 0-127 i predstavlja network dio, a ostala tri okteta su host dio (N.H.H.H).
+O: Defaultna maska je /8 (255.0.0.0); klasa ima 126 mreža sa 2^24 - 2 = 16.777.214 iskoristivih adresa.
+O: Privatni opseg je 10.0.0.0/8, loopback 127.0.0.0/8, a defaultna ruta 0.0.0.0.
+---
+
+P: B klasa?
+K: Prvi oktet 128-191 = 128-191 | 128 do 191
+K: /16, maska 255.255.0.0 = 255.255.0.0 | /16 | 16
+K: N.N.H.H = n.n.h.h | n n h h | dva okteta | prva dva
+K: 2^14 = 16.384 mreža = 16384 | 16.384 | 2^14 | 14
+K: 2^16 - 2 = 65.534 hosta = 65534 | 65.534 | 2^16
+K: Privatne 172.16.0.0/12 = 172.16 | 172
+PRAG: 3
+O: Prvi oktet je u rangu 128-191; prva dva okteta su network, druga dva host dio (N.N.H.H), maska /16 (255.255.0.0).
+O: Klasa ima 2^14 = 16.384 mreža sa po 2^16 - 2 = 65.534 iskoristive adrese.
+O: Privatni opseg je 172.16.0.0/12, a link-local 169.254.0.0/16.
+---
+
+P: C klasa?
+K: Prvi oktet 192-223 = 192-223 | 192 do 223
+K: /24, maska 255.255.255.0 = 255.255.255.0 | /24 | 24
+K: N.N.N.H = n.n.n.h | n n n h | tri okteta | prva tri
+K: 2^21 = 2.097.152 mreža = 2097152 | 2.097.152 | 2^21 | 21
+K: 2^8 - 2 = 254 hosta = 254 | 2^8
+K: Privatne 192.168.0.0/16 = 192.168
+PRAG: 3
+O: Prvi oktet je u rangu 192-223; prva tri okteta su network, posljednji host dio (N.N.N.H), maska /24 (255.255.255.0).
+O: Klasa ima 2^21 = 2.097.152 mreža sa po 2^8 - 2 = 254 iskoristive adrese.
+O: Privatni opseg je 192.168.0.0/16.
+---
+
+P: D klasa?
+K: Multicast = multicast
+K: Grupa primalaca = grup | primalac | primaoc
+K: Bitovi 1110 = 1110
+K: Opseg 224-239 = 224
+PRAG: 2
+O: Adrese klase D su rezervisane za multicast (simultana isporuka grupi primalaca), opseg 224-239.
+O: Četiri bita najveće važnosti su uvijek 1110.
+---
+
+P: E klasa?
+K: Rezervisana za istraživanja = istraziv | eksperiment | rezervis
+K: IETF = ietf
+K: Nije za javno korištenje = javno | nije dozvolj
+K: Bitovi 1111 = 1111
+PRAG: 2
+O: Klasu E je IETF rezervisao za vlastita istraživanja - nijedna adresa nije dozvoljena za javno korištenje (opseg 240-255).
+O: Bitovi najveće važnosti su 1111.
+---
+
+P: Privatne adrese?
+K: Lokalni značaj = lokaln
+K: Ne mogu direktno na Internet = ne mogu | nisu direktn | internet
+K: NAT / PAT = nat | pat
+K: 10.0.0.0/8 = 10.0.0.0 | 10/8
+K: 172.16.0.0/12 = 172.16
+K: 192.168.0.0/16 = 192.168
+PRAG: 4
+O: Privatne IP adrese imaju samo lokalni značaj i ne mogu direktno pristupiti Internetu; za pristup se koristi NAT ili PAT.
+O: Opsezi: A klasa 10.0.0.0/8, B klasa 172.16.0.0/12 (do 172.31.255.255), C klasa 192.168.0.0/16.
+---
+
+P: Javne IP adrese?
+K: Jedinstvene, globalne = jedinstven | globaln
+K: Standardizovane = standard
+K: Nedostatak adresa = nedostat | ponestaj
+K: NAT/PAT pretvara privatnu u javnu = nat | pat | pretvar
+PRAG: 3
+O: Javne IP adrese su jedinstvene, globalne i standardizovane.
+O: Zbog nedostatka slobodnih adresa uvedene su privatne adrese koje se pri izlasku na Internet pretvaraju u javnu adresu pomoću NAT/PAT.
+---
+
+P: Specijalne adrese?
+K: Adresa mreže - host biti nule = adresa mrez | nul
+K: Broadcast - host biti jedinice = broadcast | jedinic
+K: Loopback 127.0.0.0/8 = loopback | 127
+K: Defaultna 0.0.0.0 = 0.0.0.0 | default
+K: Link-local 169.254.0.0/16 = link | 169.254
+PRAG: 4
+O: Adresa mreže - u host dijelu svi biti su nula; ne dodjeljuje se hostu.
+O: Broadcast adresa - u host dijelu svi biti su jedan; na nju odgovaraju svi hostovi mreže.
+O: Loopback - opseg 127.0.0.0/8 (najčešće 127.0.0.1), host usmjerava saobraćaj na sebe.
+O: Defaultna adresa 0.0.0.0 pokriva sve neizričito navedene mreže; link-local 169.254.0.0/16 se dodjeljuje automatski kad nema IP konfiguracije.
+---
+
+P: Fragment offset i identification polje u IP zaglavlju?
+K: Mjesto fragmenta u originalnom paketu = mjesto fragment | pozicij | original
+K: Jedinice od 8 okteta = 8 oktet | 64 bit
+K: Identifikator paketa = identifik
+K: Manji MTU - razdvajanje = mtu | razdvaj | fragmentir
+K: Isti identifikacijski broj = isti
+PRAG: 3
+O: Fragment offset definiše mjesto fragmenta u originalnom paketu, mjereno u jedinicama od 8 okteta (prvi fragment ima offset 0).
+O: Identification polje je identifikator paketa koji se koristi kada paket prelazi u mrežu sa manjim MTU pa se dijeli na fragmente.
+O: Svi fragmenti istog paketa imaju isti identifikacijski broj.
+---
+
+P: Time To Live (TTL) polje u IP zaglavlju?
+K: Broj hopova / životni vijek = hop | zivotn | vijek
+K: 8-bitna vrijednost = 8-bit | 8 bit
+K: Smanjuje se za jedan na svakom uređaju = smanj | za jedan
+K: Na nuli se paket odbacuje = nul | odbacuj
+PRAG: 3
+O: TTL je broj hopova, tj. životni vijek paketa - 8-bitna vrijednost zavisna od operativnog sistema.
+O: Svaki uređaj kroz koji paket prolazi smanji TTL za jedan; kada TTL padne na nulu, paket se odbacuje.
+---
+
+P: NAT?
+K: Network Address Translation = network address translation | translat
+K: Privatne u javne = privatn | javn
+K: Dva interfejsa = dva interfejs
+K: Prosljeđuje kao da je sam pokrenuo = kao da | pokren | inicir
+K: Odgovor nazad hostu = nazad | obrnut | odgovor
+PRAG: 3
+O: NAT (Network Address Translation) prevodi privatne u javne IP adrese.
+O: Uređaj ima dva interfejsa - privatni u lokalnoj mreži i javni; zahtjev hosta prosljeđuje preko javnog kao da je sam pokrenuo komunikaciju.
+O: Kada odgovor stigne, prosljeđuje ga hostu koji je poslao zahtjev.
+---
+
+P: PAT?
+K: Port Address Translation = port address
+K: Mnogo privatnih - jedna javna = jedn javn | jednu javn | veliki broj
+K: Mijenja se samo broj porta = port
+PRAG: 2
+O: PAT (Port Address Translation) kombinuje veliki broj privatnih IP adresa sa jednom javnom IP adresom, mijenjajući isključivo broj porta.
+---
+
+P: DHCP?
+K: Dynamic Host Configuration Protocol = dynamic host
+K: Širi set parametara od BOOTP = bootp | sir
+K: DHCP server odgovara na zahtjeve = server | zahtjev
+K: Zasebna mašina ili ruter/switch = ruter | router | switch | zaseb
+PRAG: 3
+O: DHCP (Dynamic Host Configuration Protocol) omogućava konfigurisanje šireg seta parametara od BOOTP protokola.
+O: DHCP server je host koji odgovara na DHCP zahtjeve iz mreže; može biti zasebna mašina ili ruter/switch.
+---
+
+P: SLAAC?
+K: Stateless Address Autoconfiguration = stateless | autokonfig
+K: Automatska konfiguracija IPv6 = automatsk | ipv6
+K: Router Solicitation = solicitation | rs
+K: Router Advertisement = advertis | ra
+K: Prefiks / interfejs ID = prefiks | prefix | interfejs id | interface
+K: DAD = dad | duplicate
+K: Ruter ne vodi evidenciju = evidencij
+PRAG: 4
+O: SLAAC (Stateless Address Autoconfiguration) omogućava automatsku konfiguraciju hosta IPv6 adresom.
+O: Host Router Solicitation porukom otkriva metodu konfiguracije; ruter šalje Router Advertisement sa mrežnim prefiksom i načinom generisanja interfejs ID-a.
+O: Duplicate Address Detection (DAD) provjerava da je interfejs ID jedinstven.
+O: Metoda je stateless jer ruter ne vodi evidenciju o računarima kojima je poslao informacije.
+---
+
+P: Stateless DHCP (SLAAC + DHCP) konfigurisanje IPv6 adresa?
+K: Kombinacija rutera i DHCP servera = kombin | dhcp
+K: RA šalje prefiks i dužinu = prefiks | advertis | ra
+K: DNS i slično od DHCP = dns | wins
+K: Link-local, random/EUI-64 = link | eui | random
+K: DAD = dad | duplicate
+K: Flagovi M i O = flag | m i o | m=0
+PRAG: 4
+O: Stateless DHCP kombinuje konfiguracijske informacije rutera i DHCP servera.
+O: RA porukom ruter šalje mrežni prefiks, dužinu prefiksa i adresu, uz uputu da se ostatak (DNS, WINS...) preuzme od DHCP servera.
+O: Host generiše link-local adresu (interfejs ID random ili EUI-64), DAD-om provjerava jedinstvenost, pa šalje Solicitation i dobija RA.
+O: Flagovi M i O određuju mod: M=0,O=0 SLAAC; M=0,O=1 SLAAC+DHCP; M=1 Stateful DHCP.
+---
+
+P: Stateful DHCP?
+K: RA poruka = advertis | ra
+K: M bit = 1 = m bit | m flag | m=1 | m = 1
+K: Sve informacije od DHCPv6 servera = dhcpv6 | dhcp v6 | dhcp server | isklju
+K: Ruter može biti DHCP server = ruter | router
+K: Više konfigurabilnih opcija na serveru = vise | opcij
+PRAG: 3
+O: Kada host primi RA poruku sa M bitom postavljenim na 1, konfiguraciju preuzima isključivo od DHCPv6 servera.
+O: DHCPv6 server može biti samostalni host ili ruter; server nudi više konfigurabilnih opcija.
+O: Ruter u nekim scenarijima može biti istovremeno DHCP klijent i DHCP server.
+---
+
+P: Tuneliranje?
+K: Povezivanje mreža istog tipa preko druge mreže = drug mrez | izmedju | istog tip
+K: Između dva gatewaya = gateway
+K: Enkapsulacija i posebno zaglavlje = enkapsul | zaglavlj
+K: IPv6 u IPv4 = ipv6 | ipv4
+K: Dual stack = dual
+K: Povećana latencija = latenc
+PRAG: 3
+O: Tuneliranje povezuje mreže istog tipa kada se između njih nalazi druga mreža; obično između dva gatewaya ili udaljenog klijenta i gatewaya.
+O: Protokol na jednoj strani enkapsulira originalni paket i dodaje posebno zaglavlje, a na drugoj ga ponovo oblikuje i isporučuje.
+O: Npr. IPv6 paket se stavi u IPv4 paket između dva dual-stack routera; metoda povećava latenciju.
+---
+
+P: VPN tuneliranje?
+K: Tuneliranje je osnovni koncept VPN-a = tunel
+K: Podaci jedne mreže preko druge = preko drug | druge mrez
+K: Enkapsulacija sa posebnim zaglavljem = enkapsul | zaglavlj
+K: Tajnost i integritet = tajnost | integritet | povjerljiv | enkripc
+K: Neporecivost = neporeciv
+PRAG: 3
+O: Osnovni koncept VPN tehnologije je tuneliranje - podaci namijenjeni jednoj mreži prenose se preko druge mreže.
+O: Protokol enkapsulira originalne podatke i dodaje posebno zaglavlje, a na drugoj strani se paket ponovo oblikuje.
+O: VPN mora osigurati i tajnost i integritet (a nekad i neporecivost) podataka.
+---
+
+P: 3-way handshake?
+K: TCP uspostavlja konekciju = tcp | konekcij | uspostav
+K: Sekvencijalni brojevi = sekvenc | seq
+K: Acknowledgement brojevi = ack | acknowledg
+K: Window size = window
+K: SYN = syn
+K: SYN-ACK = syn-ack | syn ack | synack
+PRAG: 4
+O: 3-way handshake uspostavlja konekciju prije razmjene podataka (na zahtjev TCP-a); razmjenjuju se sekvencijalni brojevi, ACK brojevi i window size.
+O: Host šalje SYN zahtjev sa sekvencijalnim brojem.
+O: Odredište odgovara svojim SYN-om i ACK brojem većim za jedan od SEQ inicijatora, uz vlastiti SEQ.
+O: Inicijator šalje ACK kojim potvrđuje SYN i konekcija je uspostavljena.
+---
+
+P: DNS?
+K: Domain Name System = domain name
+K: Ime domene u IP adresu = ime | ip
+K: Ljudima lakše pamtiti = pamt | ljud
+K: Baza zapisa (stablo) = baza | stabl
+K: Server = server
+K: Resolver = resolver
+PRAG: 4
+O: DNS (Domain Name System) pretvara logičko ime domene (prihvatljivo ljudima) u IP adresu (prihvatljivu računaru), jer je ljudima teško pamtiti brojeve.
+O: Komponente: baza zapisa (domeni u strukturi stabla), server (čuva informacije o imenima) i resolver (pribavlja informaciju za klijenta).
+---
+
+P: Ethernet (razvoj i implementacije)?
+K: Prvi Ethernet 3 Mb/s, koaksijalni = 3 mb | 3mb | koaks
+K: 10 Mb/s - IEEE 802.3 = 802.3 | 10 mb
+K: Brzi Ethernet 100 Mbps = brzi | fast | 100
+K: Gigabitni 1 Gbps / 10 Gbps = gigabit | 1 gb | 10 gb
+K: Razlike: medij, brzina, kodiranje, udaljenost = medij | kodiranj | udaljen
+PRAG: 3
+O: Prvi Ethernet (razvijen kad i ALOHA) imao je koaksijalni kabl i radio na 3 Mb/s; zatim 10 Mb/s Ethernet postaje IEEE 802.3 standard.
+O: Brzi Ethernet radi na 100 Mbps, Gigabitni na 1 Gbps, a 10-gigabitni na 10 Gbps.
+O: Implementacije se razlikuju po mediju, brzini, linijskom kodiranju, udaljenosti i broju čvorova te načinu otkrivanja kolizije.
+---
+
+P: Problem skrivenog terminala?
+K: Stanice nisu u dometu = domet
+K: Prenos nije opažen u drugom dijelu ćelije = opaz | celij
+K: Ne čuje stanice izvan dometa = ne cuj | izvan
+K: Kolizija = kolizij
+K: Bežične mreže = bezic
+PRAG: 3
+O: Pošto u bežičnoj mreži nisu sve stanice u dometu, prenos u jednom dijelu ćelije možda neće biti opažen u drugom.
+O: Stanica A osluškuje i ne čuje C koja šalje stanici B, pa pogrešno zaključi da može slati B - nastaje kolizija.
+---
+
+P: Problem izloženog terminala?
+K: Stanica čuje drugu koja emituje = cuj | emit
+K: Ne šalje iako ne bi bilo kolizije = ne bi | ne zapocn | ne smije
+K: Smanjuje efikasnost / propuštena prilika = efikasn | propust | prilik
+PRAG: 2
+O: Stanica čuje drugu stanicu koja emituje i zato ne započinje slanje, iako to ne bi izazvalo koliziju.
+O: Npr. B želi slati C, čuje emisiju (A šalje D) i pogrešno odustane - propušta se prilika i smanjuje efikasnost.
+---
+
+P: Virtualna kola?
+K: Uspostava putanje prije slanja = prije slanj | uspostav
+K: Svi paketi istom stazom = istom staz
+K: Ispravan redoslijed = redoslijed | ispravn
+K: Linkovi dijeljeni sa više VK = vise virtual | istovremen
+PRAG: 3
+O: Virtualno kolo je veza kod koje se prije slanja paketa uspostavlja putanja od izvora do odredišta.
+O: Svi paketi se prenose istom stazom (linkovi se mogu dijeliti sa više virtualnih kola) i stižu u ispravnom redoslijedu.
+---
+
+P: Datagram?
+K: Svaki paket neovisno = neovisn | nezavisn
+K: Različite staze = razlicit staz | razlicitom
+K: Pogrešan redoslijed = pogresn | redoslijed
+K: Kontrola toka između susjednih čvorova = susjedn | kontrol
+PRAG: 3
+O: Kod datagrama se svaki paket prenosi neovisno i može ići različitom stazom, pa paketi mogu stići u pogrešnom redoslijedu.
+O: Ruter nezavisno prosljeđuje svaki paket; kontrola toka i grešaka vrši se između susjednih čvorova.
+---
+
+P: Osnovne operacije mrežnog IP sloja?
+K: Enkapsulacija = enkapsul
+K: Routing (selekcija putanje) = routing | rutir | putanj
+K: Dekapsulacija = dekapsul | denkapsul
+K: Adresiranje = adresir
+PRAG: 3
+O: Enkapsulacija - kreiranje IP paketa.
+O: Routing - selekcija putanje od izvora do destinacije.
+O: Dekapsulacija - ekstrakcija podataka iz IP paketa (uz to i adresiranje).
+---
+
+P: Šta je adresa mreže, a šta broadcast adresa?
+K: Adresa mreže - prva u opsegu = prva
+K: Host dio sve nule = nul
+K: Broadcast - zadnja u opsegu = zadnj | posljednj
+K: Host dio sve jedinice = jedinic
+K: Odgovaraju svi hostovi = svi host
+PRAG: 4
+O: Adresa mreže je prva IP adresa u opsegu - u host dijelu ima sve nule.
+O: Broadcast adresa je zadnja u opsegu - u host dijelu ima sve jedinice, a na nju odgovaraju svi hostovi mreže.
+---
+
+P: Classless (VLSM) subnetiranje?
+K: Subnetiranje subneta = subnetiranje subnet | subnet subnet | dalje subnet
+K: Pozajmljivanje bita iz host dijela = pozajm | posudj | host
+K: Drugačija (veća) maska = maska | drugacij | vec
+K: Variable Length Subnet Mask = variable | vlsm
+PRAG: 3
+O: Classless (VLSM - Variable Length Subnet Mask) subnetiranje je subnetiranje subneta.
+O: Nakon prvog subnetiranja jedan subnet se dalje dijeli pozajmljivanjem bita iz host dijela.
+O: Subnetirani subnet dobija drugačiju, veću subnet masku.
+---
+
+P: Classful subnetiranje?
+K: Subneti jednake veličine = jednak velicin | isti broj
+K: Isti broj adresa po subnetu = isti broj | jednak
+K: Neefikasno - gubi se mnogo adresa = neefikasn | gub
+PRAG: 2
+O: Classful subnetiranje koristi subnete jednake veličine (isti broj iskoristivih adresa po subnetu).
+O: Često je neefikasno jer se gubi veliki broj IP adresa.
+---
+
+P: Šta je strukturno kabliranje i koji standardi postoje?
+K: Skup standarda za umrežavanje = skup standard | standard
+K: Pravila u planiranju i implementaciji = pravil | planiran
+K: ISO/IEC 11801 = 11801 | iso
+K: EN 50173 = 50173 | en
+K: EIA/TIA 568 = 568 | tia
+PRAG: 3
+O: Strukturno kabliranje je skup standarda za umrežavanje koji obuhvata sve vrste kabliranja; svrha je uvođenje pravila u planiranje i implementaciju mreža.
+O: Standardi: ISO/IEC IS 11801 (međunarodni), EN 50173 (evropski), EIA/TIA 568 (američki).
+---
+
+P: Koji su nivoi strukturnog kabliranja?
+K: Kampus kabliranje = kampus
+K: Vertikalno kabliranje = vertikal
+K: Horizontalno kabliranje = horizontal
+K: Radni prostor = radni prostor | radno podruc
+K: Udaljenosti 90 m / 550 m / 2 km = 90 | 550 | 2 km
+PRAG: 4
+O: Kampus kabliranje - između zgrada, optičko (550 m, 2 km).
+O: Vertikalno kabliranje - između spratova, optičko (550 m) i bakarno (90 m).
+O: Horizontalno kabliranje - po spratu, bakarno (90 m).
+O: Radni prostor - priključenje opreme na kablovski sistem.
+---
+
+P: Horizontalno kabliranje?
+K: Od rack-a do priključka = rack | ormar | prikljuc
+K: UTP kablovi = utp
+K: Forma zvijezde = zvijezd | zvezd
+K: Patch paneli i patch kablovi = patch | prespoj
+K: Sastoji se od kabla, kutije, terminacije = kutij | terminac | zavrset
+PRAG: 3
+O: Izvodi se od mrežnog ormarića (rack-a) do priključka u radnom području, uključujući patch panele i patch kablove; koriste se standardni UTP kablovi.
+O: Realizuje se u formi zvijezde od priključne kutije do razvodnog ormara.
+O: Sastoji se od horizontalnog kabla, priključne kutije, završetka kabla (terminacije) i prespojnog polja.
+---

@@ -1,0 +1,33 @@
+#include <winver.h>
+
+IDI_ICON1 ICON "ikona.ico"
+
+// podaci o programu (Svojstva -> Detalji u Windowsu); pomaže da antivirus ne sumnja na nepoznat .exe
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "M33RK4"
+            VALUE "FileDescription",  "Studious Knight, a pixel learning game"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "StudiousKnight"
+            VALUE "LegalCopyright",   "Copyright (c) 2026 M33RK4. All rights reserved."
+            VALUE "OriginalFilename", "StudiousKnight.exe"
+            VALUE "ProductName",      "Studious Knight"
+            VALUE "ProductVersion",   "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END

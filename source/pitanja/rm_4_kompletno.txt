@@ -1,0 +1,680 @@
+# =====================================================================
+#  STUDIOUS KNIGHT - Računarske mreže, nivo 4: RAČUNARSKE MREŽE - kompletna skripta
+#  (cijeli kurs). Izvor: "RACUNARSKE_MREZE_QA_COMPREHENSIVE.docx"
+#  Format: P: pitanje / K: pojam = alternative | ... / PRAG: n / O: red odgovora / ---
+# =====================================================================
+
+P: Koja je ključna tehnologija savremenih mreža?
+K: Multipleksiranje = multipleks
+PRAG: 1
+O: Multipleksiranje.
+---
+
+P: Definišite računarsku mrežu i navedite ključnu razliku u odnosu na distribuirani sistem.
+K: Skup nezavisnih računara = nezavisn | skup racunar
+K: Jedinstvena komunikaciona tehnologija = komunikac | tehnolog
+K: Distribuirani sistem - softver na vrhu mreže = softver | na vrhu
+K: Middleware = middleware
+K: Izgleda kao jedinstven sistem = jedinstven | cjelovit
+PRAG: 3
+O: Računarska mreža je skup nezavisnih računara povezanih jedinstvenom komunikacionom tehnologijom.
+O: Distribuirani sistem je softverski sistem izgrađen na vrhu mreže (pomoću middleware-a) koji korisnicima izgleda kao jedinstven i cjelovit sistem.
+---
+
+P: Šta je "Sneaker net"?
+K: Bez računarske mreže = bez mrez | bez racunarsk
+K: Fizički prenos medija = fizick | prenos
+K: Prenosivi mediji (disketa, USB) = disket | usb | prenosiv
+K: Pješke = pjesk | peske | hodaj
+PRAG: 2
+O: Neformalni način razmjene podataka bez računarske mreže - datoteke se fizički prenose pješke pomoću prenosivih medija (diskete, USB).
+---
+
+P: Šta je klijent-server model?
+K: Klijent šalje zahtjev = klijent | zahtjev
+K: Server izvodi zadatak = server
+K: Vraća odgovor = odgovor | vrac
+K: Jedan server, mnogo klijenata = mnogo | vise klijen
+PRAG: 3
+O: Model u kojem jedan proces (klijent) šalje zahtjev preko mreže, a drugi proces (server) izvodi zadatak i vraća odgovor.
+O: Jedan server opslužuje mnogo klijenata.
+---
+
+P: Objasnite koncept Peer-to-Peer (P2P) mreže.
+K: Ravnopravni računari = ravnopravn | jednak
+K: Nema podjele na klijente i servere = nema | bez podjel
+K: Direktna komunikacija = direktn
+K: Dijeljenje resursa = resurs | dijel
+PRAG: 3
+O: P2P je mreža ravnopravnih računara bez jasne podjele na klijente i servere.
+O: Svaki korisnik komunicira direktno sa drugima u grupi i dijeli resurse.
+---
+
+P: Šta je princip neutralnosti mreže (Net neutrality)?
+K: ISP provajderi = isp | provajd
+K: Svi podaci tretiraju jednako = jednak | ravnopravn
+K: Bez blokiranja = blokir
+K: Bez usporavanja / favorizovanja = usporav | favoriz | prioritet
+PRAG: 3
+O: Princip koji zahtijeva da internet provajderi (ISP) sve podatke tretiraju jednako, bez blokiranja, usporavanja ili favorizovanja određenih aplikacija, servisa ili korisnika.
+---
+
+P: Koji su osnovni elementi komunikacionog sistema?
+K: Izvor (source) = izvor | source
+K: Predajnik (transmitter) = predajnik | transmitter
+K: Prenosni sistem / kanal / medij = kanal | medij | prenosni
+K: Prijemnik (receiver) = prijemnik | receiver
+K: Odredište (destination) = odrediste | odredišt | destination
+PRAG: 4
+O: 1. Izvor (source), 2. Predajnik (transmitter), 3. Prenosni sistem (komunikacijski kanal/medij), 4. Prijemnik (receiver), 5. Odredište (destination).
+---
+
+P: Koja je razlika između logičke i fizičke konektivnosti?
+K: Fizička - hardver = hardver
+K: NIC, adapteri, modemi, kablovi = nic | adapter | modem | kabl
+K: Logička - drajveri = drajver | driver
+K: Skup protokola (TCP/IP) = protokol | tcp
+PRAG: 3
+O: Fizička konektivnost se ostvaruje hardverom (NIC, adapteri, modemi, kablovi).
+O: Logička konektivnost zahtijeva drajvere i skup protokola (najčešće TCP/IP).
+---
+
+P: Koji interni i eksterni faktori utiču na uspjeh mrežne komunikacije?
+K: Interni: veličina poruke = velicin
+K: Kompleksnost poruke = kompleksn | slozen
+K: Važnost (QoS) = vaznost | qos
+K: Eksterni: kvalitet putanje = kvalitet | putanj
+K: Zagušenja = zagusen
+K: Raspoloživo vrijeme / broj transformacija = vrijeme | transformac | promjen
+PRAG: 4
+O: Interni faktori: veličina poruke, kompleksnost poruke i njena važnost (QoS).
+O: Eksterni faktori: kvalitet putanje, broj transformacija paketa, broj promjena putanja, mrežna zagušenja i raspoloživo vrijeme.
+---
+
+P: Koja je razlika između broadcast i point-to-point tehnologije prenosa?
+K: Broadcast - zajednički kanal = zajednick | dijel
+K: Svi čuju sve = svi cuju | svi racunar
+K: Point-to-point - parovi računara = parov | par
+K: Usmjerene veze = usmjeren
+PRAG: 3
+O: Broadcast mreže koriste zajednički komunikacioni kanal koji dijele svi računari (svi čuju sve).
+O: Point-to-point povezuje isključivo parove računara usmjerenim vezama.
+---
+
+P: Objasnite pojmove Unicast, Multicast i Broadcast.
+K: Unicast - jednom računaru = unicast
+K: Multicast - grupi računara = multicast
+K: Broadcast - svim računarima = broadcast
+K: Broadcast adresa = adres
+PRAG: 3
+O: Unicast - slanje jednom specifičnom računaru.
+O: Multicast - slanje određenoj grupi računara.
+O: Broadcast - slanje svim računarima u mreži (posebna broadcast adresa).
+---
+
+P: Kako se mreže dijele po veličini (prostoru koji pokrivaju)?
+K: PAN (do 10 m) = pan
+K: LAN (zgrada, kampus) = lan
+K: MAN (grad, 10 km) = man
+K: WAN (region, kontinent) = wan
+K: Internet (planeta) = internet | planet
+PRAG: 4
+O: PAN (personalne, do 10 m), LAN (lokalne - zgrada/kampus), MAN (gradske, ~10 km), WAN (regionalne/kontinent, 100+ km) i Internet (planeta).
+---
+
+P: Objasnite razliku između uređaja hub i switch.
+K: Hub - fizički sloj (L1) = l1 | fizick
+K: Hub prosljeđuje na sve portove = sve port | svim port
+K: Širi kolizijsku domenu = kolizij
+K: Switch - sloj 2 = sloj 2 | l2 | drugi sloj | 2. sloj
+K: Switch čita MAC adrese = mac
+K: Inteligentno prosljeđivanje = inteligent | analizir | odluk
+PRAG: 4
+O: Hub je uređaj fizičkog sloja (L1) koji samo pojačava i prosljeđuje signal na sve portove (širi kolizijsku domenu).
+O: Switch radi na sloju 2, analizira saobraćaj, čita MAC adrese i inteligentno donosi odluke o prosljeđivanju.
+---
+
+P: Šta je ruter (router) i koje su njegove interne komponente?
+K: Spaja različite mreže = spaja | razlicit mrez
+K: Selekcija putanje (routing) = routing | rutir | selekc | putanj
+K: Prosljeđivanje (forwarding) = forwarding | prosljedj
+K: ROM = rom
+K: RAM = ram
+K: FLASH i NVRAM = flash | nvram
+PRAG: 4
+O: Ruter je uređaj koji spaja različite mreže - vrši selekciju putanje (routing) i prosljeđivanje (forwarding).
+O: Interne komponente: ROM, RAM, FLASH i NVRAM memorija.
+---
+
+P: Koje su osnovne mrežne topologije i njihove mane/prednosti?
+K: BUS - prekid kabla ruši sve = bus | sabirnic | magistral
+K: Zvijezda - pad centralnog uređaja = zvijezd | zvezd | star
+K: Ring - prekid prstena = ring | prsten
+K: Mesh - najotpornija, najskuplja = mesh | isprepl
+K: Prednosti i mane = jeftin | skup | otporn | redundant
+PRAG: 4
+O: BUS (sabirnica) - svi na jednom mediju, jeftino, ali prekid kabla ruši sve.
+O: Zvijezda (Star) - sve ide preko centralnog uređaja; pad noda ne ruši mrežu, ali pad centralnog uređaja ruši sve.
+O: Ring (prsten) - nodovi u krugu, prekid prstena prekida komunikaciju.
+O: Mesh (isprepletena) - najotpornija zbog redundantnih veza, ali najskuplja.
+---
+
+P: Šta je OSI model i zašto je uveden?
+K: Deskriptivni model ISO = iso | deskript
+K: 7 slojeva = 7 | sedam
+K: Smanjuje kompleksnost = kompleksn | slozen
+K: Standardizuje interfejse = standard | interfejs
+K: Modularni inženjering / brži razvoj = modular | razvoj
+K: Interoperabilnost proizvođača = interoperab | proizvodj
+PRAG: 4
+O: OSI je deskriptivni mrežni model (ISO) od 7 slojeva.
+O: Uveden je da smanji kompleksnost komunikacije, standardizuje interfejse, ubrza razvoj (modularni inženjering) i osigura interoperabilnost različitih proizvođača.
+---
+
+P: Navedite i ukratko opišite svih 7 slojeva OSI modela.
+K: Fizički = fizick
+K: Data Link = data link | veze podataka
+K: Network = network | mrezn
+K: Transport = transport
+K: Session = session | sesij
+K: Presentation = presentation | prezentac
+K: Application = application | aplikac
+PRAG: 6
+O: 1. Fizički (električne/mehaničke specifikacije, bitovi); 2. Data Link (LLC i MAC, okviri, fizičko adresiranje); 3. Network (IP logičko adresiranje i rutiranje).
+O: 4. Transport (pouzdana veza s kraja na kraj, segmentacija); 5. Session (uspostava i prekid sesije); 6. Presentation (formatiranje, enkripcija, kompresija); 7. Application (mrežni servisi aplikacijama).
+---
+
+P: Od koja 4 sloja se sastoji TCP/IP model?
+K: Aplikacijski (OSI 5, 6, 7) = aplikac
+K: Transportni = transport
+K: Internet (OSI network) = internet
+K: Network Access (OSI 1 i 2) = network access | pristup
+PRAG: 4
+O: 1. Aplikacijski (spaja OSI 5, 6 i 7), 2. Transportni, 3. Internet (OSI Network), 4. Network Access (spaja OSI 1 i 2).
+---
+
+P: Šta su protokoli i koje su njihove osnovne funkcije?
+K: Skup pravila komunikacije = pravil
+K: Struktura poruke = struktur | poruk
+K: Uspostava/prekid prenosa = uspostav | prekid
+K: Adresiranje = adresir
+K: Poruke o greškama = gresk | grešk
+PRAG: 3
+O: Protokoli su skup pravila komunikacije.
+O: Funkcije: definisanje strukture poruke, uspostava/prekid prenosa, adresiranje za prosljeđivanje i razmjena poruka o greškama.
+---
+
+P: Objasnite ulogu ARPANET-a i NSFNET-a.
+K: ARPANET - prva mreža sa komutacijom paketa = arpanet | komutacij paket | paket
+K: Vojna otpornost (DoD) = vojn | dod | odbran
+K: NSFNET - civilna/univerzitetska = nsfnet | civiln | univerzit
+K: Povezala superračunare = superracunar
+K: Backbone komercijalnog Interneta = backbone | okosnic | komercijal
+PRAG: 3
+O: ARPANET je prva mreža zasnovana na komutaciji paketa, razvijena za vojnu otpornost (DoD).
+O: NSFNET je civilna/univerzitetska mreža koja je povezala superračunare i prerasla u okosnicu (backbone) komercijalnog Interneta.
+---
+
+P: Šta je POP (Point of Presence), a šta IXP (Internet Exchange Point)?
+K: POP - prelazak u mrežu provajdera = provajd | isp
+K: Kućni/lokalni paketi = kucn | lokaln
+K: IXP - čvorište rutera = cvorist | ruter
+K: ISP-ovi razmjenjuju saobraćaj = razmjen
+K: Peering = peering | ravnopravn
+PRAG: 3
+O: POP je lokacija gdje se kućni/lokalni paketi prebacuju u mrežu provajdera.
+O: IXP je čvorište prepuno rutera gdje različiti ISP-ovi besplatno i ravnopravno razmjenjuju saobraćaj (peering).
+---
+
+P: Kako su evoluirale mreže mobilne telefonije (1G do 4G)?
+K: 1G - AMPS, analogno = amps | analog
+K: 2G - GSM, digitalno, SMS = gsm | sms
+K: 3G - UMTS/WCDMA = umts | wcdma
+K: 4G - LTE = lte
+PRAG: 3
+O: 1G (AMPS, analogno), 2G (GSM, digitalno + SMS), 3G (UMTS/WCDMA, prenos podataka do 14 Mb/s), 4G (LTE, brzi širokopojasni IP prenos).
+---
+
+P: Šta je CSMA/CA i kod kojih mreža se koristi?
+K: Izbjegavanje kolizija = izbjeg | avoid
+K: OFDM = ofdm
+K: 802.11 / WiFi = 802.11 | wifi | bezic
+K: Ne mogu detektovati kolizije = ne mogu detekt | detekt
+PRAG: 3
+O: Carrier Sense Multiple Access sa izbjegavanjem kolizija (Collision Avoidance), uz OFDM tehniku.
+O: Koristi se kod 802.11 (WiFi) bežičnih mreža jer one ne mogu detektovati kolizije kao žičani Ethernet.
+---
+
+P: Koje su brzine WiFi standarda 802.11 b, g, n, ac?
+K: b - 11 Mbps = 11
+K: g - 54 Mbps = 54
+K: n - 450 Mbps, MIMO = 450 | mimo
+K: ac - 1300 Mbps = 1300
+K: 2.4 / 5 GHz = 2.4 | 5 ghz | ghz
+PRAG: 4
+O: 802.11b: do 11 Mbps (2.4 GHz). 802.11g: do 54 Mbps. 802.11n: do 450 Mbps (2.4/5 GHz, MIMO). 802.11ac: do 1300 Mbps.
+---
+
+P: Šta znače oznake 10BASE-T, 10BASE5 i 10BASE2?
+K: 10 = brzina u Mbps = brzin | 10 mb | mbps
+K: BASE = baseband = baseband
+K: T = UTP kabl = utp | twist | paric
+K: 5 = 500 m, thicknet = 500 | thick | debel
+K: 2 = ~200 m (185 m), thinnet = 185 | 200 | thin | tank
+PRAG: 4
+O: 10 = brzina u Mbps, BASE = baseband signalizacija.
+O: T = UTP kabl; 5 = domet 500 m (Thicknet koaksijalni); 2 = ~200 m, tj. 185 m domet (Thinnet koaksijalni).
+---
+
+P: Koje su karakteristike UTP, STP i ScTP (FTP) kablova?
+K: UTP - bez oklopa, jeftin = utp | bez oklop | jeftin
+K: Osjetljiv na EMI/RFI = emi | rfi | smetnj
+K: STP - oklop svake parice = stp | oklop
+K: ScTP (FTP) - folija oko UTP = sctp | ftp | folij
+K: Max 100 m = 100
+PRAG: 4
+O: UTP sadrži uvijene parice bez oklopa (jeftin, osjetljiv na EMI/RFI).
+O: STP ima oklop svake parice i vanjski oklop; ScTP (FTP) ima foliju oko klasičnog UTP-a za zaštitu od šumova (crosstalk).
+O: Maksimalna udaljenost svih je 100 m bez pojačivača.
+---
+
+P: Koje vrste UTP patch kablova postoje zavisno od namjene?
+K: Straight-through (računar - switch) = straight
+K: Crossover (računar - računar, switch - switch) = crossover | cross
+K: Rollover (konzola rutera) = rollover | konzol
+PRAG: 3
+O: Straight-through (računar na switch), Crossover (računar na računar ili switch na switch) i Rollover (konfiguracija routera preko konzolnog porta).
+---
+
+P: Kako funkcioniše optičko vlakno i koja su dva glavna tipa?
+K: Svjetlosni impulsi = svjetl | svetl
+K: Totalna unutrašnja refleksija = refleks
+K: Indeks refrakcije jezgra veći = refrakc | jezgr
+K: Multimodno - šire jezgro, LED, kraći domet = multimod | led
+K: Monomodno - usko jezgro, laser, daleko = monomod | singlemod | laser
+PRAG: 4
+O: Prenosi svjetlosne impulse totalnom unutrašnjom refleksijom (indeks refrakcije jezgra veći od omotača).
+O: Multimodno - šire jezgro, više modova, koristi LED, kraći domet.
+O: Monomodno - usko jezgro, jedan mod, koristi laser, za veoma daleke WAN veze.
+---
+
+P: Objasnite pojmove full-duplex, half-duplex i simplex.
+K: Full - istovremeno dvosmjerno = istovremen | full
+K: Half - oba smjera, jedan po jedan = half | jedan po jedan | naizmjenic
+K: Simplex - jednosmjerno = simplex | jednosmjer
+PRAG: 3
+O: Full-duplex: istovremeni dvosmjerni prenos. Half-duplex: oba smjera, ali jedan po jedan. Simplex: isključivo jednosmjerni prenos.
+---
+
+P: Šta kaže Šenonova, a šta Nikvistova teorema?
+K: Nikvist - kanal bez šuma = nikvist | nyquist | bez sum
+K: 2B uzoraka/s = 2b
+K: Šenon - termički šum = senon | shannon | sum
+K: Propusni opseg (B) = propusn | opseg | bandwidth
+K: Odnos signal/šum (S/N) = s/n | signal | odnos
+PRAG: 3
+O: Nikvist određuje maksimalnu brzinu signaliziranja kanala bez šuma (2B uzoraka/s).
+O: Šenon računa maksimalnu brzinu prenosa kanala sa termičkim šumom, zavisno od propusnog opsega (B) i odnosa signal/šum (S/N).
+---
+
+P: Šta definiše Ethernet i na kojim slojevima radi?
+K: L1 fizički = l1 | fizick
+K: Donji podsloj L2 (MAC) = mac | l2
+K: CSMA/CD = csma
+K: Enkapsulacija okvira = enkapsul | okvir
+K: MAC adrese (fizičko adresiranje) = adres
+PRAG: 3
+O: Ethernet radi na L1 (fizički) i donjem podsloju L2 (MAC).
+O: Definiše metode pristupa mediju (CSMA/CD), enkapsulaciju okvira i fizičko adresiranje (MAC adrese).
+---
+
+P: Kako funkcioniše CSMA/CD?
+K: Carrier Sense - osluškuje medij = oslusk | carrier
+K: Multiple Access - šalje ako je slobodan = slobodan | multiple
+K: Collision Detection = detekc | detect
+K: JAM signal = jam
+K: Backoff algoritam = backoff | nasumic
+PRAG: 4
+O: Uređaj prvo osluškuje medij (Carrier Sense); ako je slobodan šalje (Multiple Access) i kontinuirano osluškuje tokom slanja.
+O: Ako se dvije stanice sudare, detektuje se kolizija (Collision Detection), šalje se JAM signal i pokreće Backoff algoritam (nasumično čekanje prije ponovnog slanja).
+---
+
+P: Šta je pravilo 5-4-3 kod starih Ethernet mreža?
+K: 5 segmenata = 5 segm | pet segm
+K: 4 repeatera = 4 repe | cetiri
+K: 3 segmenta sa nodovima = 3 segm | tri segm
+K: Ograničava kolizijsku domenu = kolizij
+PRAG: 3
+O: Maksimalno 5 segmenata, povezanih preko 4 repeatera, od kojih samo na 3 segmenta mogu biti zakačeni nodovi (računari).
+O: Ovo ograničava širenje kolizijske domene.
+---
+
+P: Koja su polja u Ethernet okviru (frame-u)?
+K: Preamble = preamble | preambul
+K: Destinacijska MAC = destinac | odredisn
+K: Izvorišna MAC = izvorisn | source
+K: Length/Type = length | type | duzin
+K: Podaci min. 46 bajta = 46 | podac
+K: FCS (CRC) = fcs | crc
+PRAG: 4
+O: Preamble (sinhronizacija), destinacijska MAC adresa, izvorišna MAC adresa, Length/Type (dužina ili tip protokola), podaci (minimalno 46 bajta) i FCS (Frame Check Sequence sa CRC provjerom).
+---
+
+P: Koje su 4 osnovne operacije Network sloja (L3)?
+K: Adresiranje = adresir
+K: Enkapsulacija = enkapsul
+K: Rutiranje (selekcija putanje) = rutir | routing | putanj
+K: Dekapsulacija = dekapsul | denkapsul
+PRAG: 4
+O: 1. Adresiranje, 2. Enkapsulacija, 3. Rutiranje (selekcija putanje), 4. Dekapsulacija.
+---
+
+P: Koja su osnovna svojstva IPv4 protokola?
+K: Connectionless (nije konekcijski) = connectionless | nije konekc | nekonekt
+K: Best effort (nepouzdan) = best effort | nepouzdan
+K: Nezavisan od medija = media independent | nezavisan od medij | ne zavisi od medij
+PRAG: 3
+O: IPv4 nije konekcijski orijentisan (connectionless), isporučuje "najbolje što može" (best effort - nepouzdan) i ne zavisi od medija (media independent).
+---
+
+P: Koje se IP adrese ne smiju dodjeljivati hostovima?
+K: Prva adresa - adresa mreže = prva | adresa mrez
+K: Host biti nule = nul
+K: Posljednja - broadcast = posljednj | zadnj | broadcast
+K: Host biti jedinice = jedinic
+PRAG: 3
+O: Prva adresa u podmreži (adresa mreže - host biti su nule) i posljednja adresa (broadcast adresa - host biti su jedinice).
+---
+
+P: Koji su defaultni opsezi i subnet maske za klase A, B i C?
+K: A: 0-127 = 0-127 | 127
+K: Maska 255.0.0.0 = 255.0.0.0
+K: B: 128-191 = 128 | 191
+K: Maska 255.255.0.0 = 255.255.0.0
+K: C: 192-223 = 192 | 223
+K: Maska 255.255.255.0 = 255.255.255.0
+PRAG: 4
+O: Klasa A: 0-127 (maska 255.0.0.0). Klasa B: 128-191 (maska 255.255.0.0). Klasa C: 192-223 (maska 255.255.255.0).
+---
+
+P: Za šta su rezervisane D i E klase IP adresa?
+K: D - multicast = multicast
+K: D: 224-239 = 224 | 239
+K: E - eksperimentalne/istraživačke = eksperiment | istraziv
+K: E: 240-255 = 240
+PRAG: 2
+O: Klasa D (224-239) za multicast. Klasa E (240-255) je rezervisana za eksperimentalne/istraživačke svrhe.
+---
+
+P: Navedite opsege privatnih IP adresa.
+K: 10.0.0.0/8 = 10.0.0.0 | 10/8
+K: 172.16.0.0/12 = 172.16
+K: 192.168.0.0/16 = 192.168
+K: Ne rutiraju se javno = javno | rutir
+PRAG: 3
+O: 10.0.0.0/8 (klasa A), 172.16.0.0/12 (klasa B), 192.168.0.0/16 (klasa C) - ne mogu se javno rutirati.
+---
+
+P: Objasnite specijalne adrese: loopback, default route, link-local.
+K: Loopback 127.0.0.0/8 = loopback | 127
+K: Self-test = test | sam sebi | samim sobom
+K: Default 0.0.0.0 = 0.0.0.0 | default
+K: Nema rute = nema rut
+K: Link-local 169.254.x.x = 169.254 | link
+K: APIPA / DHCP failback = apipa | failback | dhcp
+PRAG: 4
+O: Loopback (127.0.0.0/8) - za self-test steka.
+O: Default (0.0.0.0) - kada ruter nema rutu ka specifičnoj mreži.
+O: Link-local (169.254.x.x) - DHCP failback (APIPA).
+---
+
+P: Šta radi NAT (Network Address Translation)?
+K: Privatne u javne adrese = privatn | javn
+K: Ne-rutabilne = rutab | nerutab
+K: LAN uređaji na Internet = internet | lan
+PRAG: 2
+O: Prevodi ne-rutabilne privatne IP adrese u javne (registrovane) IP adrese kako bi uređaji iz LAN-a mogli komunicirati preko Interneta.
+---
+
+P: Šta je tabela rutiranja (routing table)?
+K: Baza unutar rutera = baza | ruter
+K: Lista poznatih mreža = poznat mrez | list
+K: Izlazni interfejsi = interfejs
+K: Najbolje putanje = najbolj | putanj | rut
+PRAG: 3
+O: Baza unutar rutera koja sadrži listu poznatih mreža, izlaznih interfejsa i najboljih putanja (ruta) do tih mreža.
+---
+
+P: Objasnite pojam administrativna distanca (AD) i metrika.
+K: AD - pouzdanost izvora rute = pouzdanost | izvor rute | administrativ
+K: Manja vrijednost pobjeđuje = manj | pobjedj
+K: Direktne 0, statičke 1, OSPF 110, RIP 120 = 110 | 120 | static
+K: Metrika - cijena rute = metrik | cijen | cost
+K: RIP hopovi, OSPF bandwidth = hop | bandwidth
+PRAG: 4
+O: AD označava pouzdanost izvora rute - manja vrijednost pobjeđuje (direktne veze 0, statičke 1, OSPF 110, RIP 120).
+O: Metrika je "cijena" (cost) rute zavisno od protokola: RIP = hopovi, OSPF = bandwidth, EIGRP = delay/bandwidth.
+---
+
+P: Koje su karakteristike Distance Vector protokola (RIP, IGRP)?
+K: Periodično šalju cijele tabele = periodic | cijel | tabel
+K: Susjedima = susjed
+K: Bellman-Ford = bellman
+K: Pogled kroz oči susjeda = oci susjed | ocima susjed
+K: Ruting petlje = petlj | loop
+K: Spora konvergencija = spor | konvergir
+PRAG: 4
+O: Periodično šalju čitave routing tabele susjedima (Bellman-Ford algoritam) i imaju "pogled na mrežu" kroz oči susjeda.
+O: Skloni su ruting petljama i sporo konvergiraju.
+---
+
+P: Koji su mehanizmi zaštite od ruting petlji (routing loops)?
+K: Split Horizon = split
+K: Route Poisoning (metrika 16) = poison | 16
+K: Hold-down timers = hold
+K: Count to infinity = infinity | beskonac
+K: Triggered updates = trigger
+PRAG: 4
+O: 1. Split Horizon (ne vraća rutu tamo odakle ju je naučio), 2. Route Poisoning (oglašava propalu rutu sa MAX metrikom 16), 3. Hold-down timers, 4. Count to infinity, 5. Triggered updates.
+---
+
+P: Šta je OSPF i po čemu se razlikuje od RIP-a?
+K: Open Shortest Path First = open shortest | shortest path
+K: Link-State = link-state | link state
+K: Dijkstra = dijkstra
+K: Potpuna topološka mapa = topolosk | mapa
+K: LSA samo pri promjeni = lsa | promjen
+K: Brza konvergencija, cost metrika = brz | cost | sirin
+PRAG: 4
+O: OSPF (Open Shortest Path First) je Link-State protokol (Dijkstra algoritam).
+O: Ruteri imaju potpunu topološku mapu (svi vide isto) i šalju trigerovane LSA pakete samo kad se desi promjena.
+O: Brzo konvergira i kao metriku koristi cost (širinu pojasa) umjesto hopova.
+---
+
+P: Koja je uloga DR (Designated Router) i BDR kod OSPF-a?
+K: Više-pristupne mreže (Ethernet) = vise-pristup | visepristup | ethernet
+K: LSA se šalju DR-u (224.0.0.6) = 224.0.0.6 | dr
+K: DR prosljeđuje ostalima (224.0.0.5) = 224.0.0.5 | prosljedj
+K: Smanjuje saobraćaj = smanj | saobracaj
+K: BDR preuzima ako DR padne = bdr | rezervn | backup
+PRAG: 3
+O: U više-pristupnim mrežama (Ethernet) svi ruteri šalju LSA pakete DR-u (na 224.0.0.6), a DR ih prosljeđuje ostalima (na 224.0.0.5).
+O: To masovno smanjuje saobraćaj u odnosu na slanje svako svakom; BDR preuzima ulogu ako DR padne.
+---
+
+P: Zašto prelazimo na IPv6 i koje su glavne prednosti?
+K: IPv4 iscrpio adrese = iscrp | nedostat | ponesta
+K: 128 bita = 128
+K: Bez potrebe za NAT-om = nat
+K: Fiksno, brže zaglavlje = fiksn | zaglavlj | brz
+K: IPsec = ipsec
+K: Autokonfiguracija (SLAAC) = slaac | autokonfig
+PRAG: 4
+O: IPv4 je iscrpio adrese; IPv6 nudi ogroman adresni prostor (128 bita) i ukida potrebu za NAT-om.
+O: Zaglavlje je fiksno i brže za obradu (nema checksuma i fragmentacije usput), uz nativnu podršku za IPsec i autokonfiguraciju (SLAAC).
+---
+
+P: Opišite format IPv6 adrese i pravila skraćivanja.
+K: Osam heksadecimalnih blokova = osam | 8 blok | heksa | hexa
+K: 16 bita po bloku (hekstet) = 16 | hekstet | hextet
+K: Vodeće nule se izbacuju = vodec | pocetn | izbac
+K: "::" samo jednom = jednom | dvotack
+PRAG: 3
+O: Zapisuje se u osam heksadecimalnih blokova po 16 bita (hekstetа), npr. 2001:0db8:85a3::8a2e:0370:7334.
+O: Vodeće nule u bloku se mogu izbaciti, a niz uzastopnih nula-blokova se samo jednom može zamijeniti sa "::".
+---
+
+P: Objasnite tipove IPv6 adresa: Global Unicast, Link-local, Unique Local.
+K: Global Unicast 2000::/3 = global | 2000
+K: Javno rutabilne = javn | rutab
+K: Link-local FE80::/10 = fe80 | link
+K: Samo na istom linku = istom link | ne rutir
+K: Unique Local FC00::/7 = unique | fc00
+K: Slično privatnim IPv4 = privatn
+PRAG: 4
+O: Global Unicast (2000::/3) - javno rutabilne adrese na Internetu.
+O: Link-local (FE80::/10) - automatski dodijeljene, samo za komunikaciju na istom linku (ne rutiraju se).
+O: Unique Local (FC00::/7) - slično privatnim IPv4 adresama, za unutrašnju upotrebu.
+---
+
+P: Šta se desilo sa broadcastom u IPv6?
+K: Ne postoji broadcast = ne postoji | nema broadcast
+K: Preuzeo multicast (FF00::/8) = multicast | ff00
+K: Anycast = anycast
+PRAG: 2
+O: U IPv6 ne postoji broadcast - njegovu funkciju je preuzeo unaprijeđeni multicast (FF00::/8) i novi anycast (isporuka najbližem).
+---
+
+P: Šta je SLAAC i EUI-64?
+K: Stateless Address Autoconfiguration = stateless | autokonfig
+K: Host sam generiše adresu = sam | generis
+K: Prefiks od rutera (RA) = prefiks | ra | advertis
+K: Interface ID iz MAC adrese = mac | interface | interfejs
+K: Umetanje FFFE u sredinu = fffe
+K: 64 bita = 64
+PRAG: 4
+O: SLAAC omogućava hostu da sam generiše IPv6 adresu dobijajući mrežni prefiks od rutera (ICMPv6 RA poruka).
+O: Host dio (Interface ID) formira se iz MAC adrese rastegnute na 64 bita umetanjem FFFE u sredinu (EUI-64 metoda).
+---
+
+P: Koje su metode tranzicije sa IPv4 na IPv6?
+K: Dual Stack = dual
+K: Tuneliranje = tunel
+K: IPv6 u IPv4 paketu = enkapsul | unutar
+K: Translacija (NAT-PT) = translac | nat-pt | nat pt
+PRAG: 3
+O: 1. Dual Stack (oba steka istovremeno aktivna), 2. Tuneliranje (IPv6 paket se enkapsulira u IPv4 paket preko stare infrastrukture), 3. Translacija (NAT-PT).
+---
+
+P: Kako se aplikacije adresiraju na transportnom sloju?
+K: Brojevi portova = port
+K: Socket = socket
+K: Dobro poznati 0-1023 = 1023 | dobro poznat | well known
+K: Registrovani 1024-49151 = 49151 | registrov
+K: Dinamički 49152-65535 = 65535 | dinamick | privatn
+PRAG: 3
+O: Korištenjem brojeva portova; kombinacija IP adrese i porta naziva se socket.
+O: Postoje dobro poznati (0-1023), registrovani (1024-49151) i dinamički/privatni portovi (49152-65535).
+---
+
+P: Kako TCP osigurava pouzdanost i kontrolu toka?
+K: Sekvencijalni brojevi = sekvenc | seq
+K: ACK brojevi = ack | acknowledg | potvrd
+K: Window size = window | prozor
+K: Kontrola toka = kontrol tok | tok
+PRAG: 3
+O: Koristi sekvencijalne brojeve (za slaganje segmenata), Acknowledgment (ACK) brojeve za potvrdu prijema i Window size za kontrolu toka (koliko bajta može poslati prije čekanja potvrde).
+---
+
+P: Objasnite TCP 3-way handshake.
+K: SYN = syn
+K: SYN+ACK = syn+ack | syn ack | syn-ack | synack
+K: ACK = ack
+K: Inicijalni parametri (seq/ack/window) = seq | window | parametr
+PRAG: 3
+O: 1. Klijent šalje SYN (zahtijeva vezu), 2. server šalje SYN+ACK, 3. klijent šalje ACK.
+O: Time se usaglašavaju inicijalni parametri (seq/ack/window size) prije prenosa.
+---
+
+P: Kada se koristi UDP umjesto TCP-a?
+K: Brzina, tolerišu gubitke = brzin | gubit | tolerir
+K: VoIP / video streaming = voip | video | stream
+K: DNS, DHCP, igre = dns | dhcp | igr
+K: Connectionless, bez ACK i kontrole toka = connectionless | bez ack | nema ack | bez uspostav
+PRAG: 3
+O: Za aplikacije kojima je bitna brzina i koje tolerišu gubitke: VoIP, video streaming, DNS, DHCP, online igre.
+O: UDP nema uspostave veze (connectionless), nema ACK-a ni kontrole toka.
+---
+
+P: Koje su osnovne DNS komponente i zapisi?
+K: DNS server, baza, resolver = resolver | baza | server
+K: A zapis (IPv4) = a zapis | a (ipv4 | ipv4
+K: AAAA (IPv6) = aaaa
+K: MX (mail) = mx
+K: CNAME (alias) = cname | alias
+K: PTR (reverzni) = ptr | reverz
+PRAG: 4
+O: Komponente: DNS server, baza i resolver.
+O: Zapisi: A (IPv4 adresa), AAAA (IPv6), MX (mail server), CNAME (alias/kanoničko ime), PTR (reverzni lookup).
+---
+
+P: Objasnite razliku između POP3 i IMAP protokola.
+K: POP3 port 110 = pop3 | 110
+K: POP3 preuzima i briše sa servera = brise | preuzim
+K: IMAP port 143/993 = imap | 143 | 993
+K: IMAP zadržava mailove na serveru = zadrzav | na server
+K: Više uređaja / sinhronizacija = vise uredjaj | sinhroniz
+PRAG: 3
+O: POP3 (port 110) preuzima mailove sa servera na lokalni klijent i briše ih sa servera.
+O: IMAP (port 143/993) zadržava mailove na serveru, a klijent njima manipuliše sinhronizovano - pogodno za pristup sa više uređaja.
+---
+
+P: Šta je MIME?
+K: Multipurpose Internet Mail Extension = multipurpose | mail extension
+K: Proširenje mail formata = prosir
+K: Slike, video, fajlovi (attachment) = slik | video | fajl | attachment | prilog
+K: Ranije samo plain text = plain | tekst
+PRAG: 3
+O: MIME (Multipurpose Internet Mail Extension) je proširio mail format tako da podržava slanje slika, videa i fajlova (attachment) u emailu koji je ranije podržavao samo plain text.
+---
+
+P: Opišite DORA proces kod DHCP-a.
+K: Discover (broadcast) = discover
+K: Offer = offer | nud
+K: Request = request | traz
+K: Ack (lease time) = ack | potvrd | lease
+PRAG: 4
+O: 1. Discover - klijent broadcastom traži server. 2. Offer - serveri nude IP. 3. Request - klijent bira i traži IP. 4. Ack - server konačno potvrđuje zakup (lease time).
+---
+
+P: Koja su 3 sloja hijerarhijskog modela LAN mreže?
+K: Access (pristupni) = access | pristupn
+K: Distribution (distribucijski) = distribu
+K: Core (okosnica) = core | okosnic
+K: Krajnji korisnici / ACL / brzi backbone = korisnik | acl | backbone | redundant
+PRAG: 3
+O: 1. Access (pristupni sloj - spaja krajnje korisnike).
+O: 2. Distribution (distribucijski - rutiranje, agregacija, ACL politike).
+O: 3. Core (okosnica - brzi, redundantni backbone prenos).
+---
+
+P: Koji su osnovni podsistemi strukturnog kabliranja?
+K: Backbone (vertikalno) = backbone | vertikal
+K: Cross-connect (patch paneli) = cross | patch | prespoj
+K: Horizontalno kabliranje (do 90 m) = horizontal | 90
+K: Radno područje = radno | radni
+PRAG: 3
+O: 1. Backbone (vertikalno kabliranje između spratova/zgrada), 2. Cross-connect (prespojne tačke, patch paneli u TR).
+O: 3. Horizontalno kabliranje (od ormara TR do zida, UTP do 90 m), 4. Radno područje (krajnji uređaji, utičnice, patch kablovi).
+---
+
+P: Šta obuhvata dokumentacija mrežne opreme po standardu IEC 750?
+K: Od L0 do L4 = l0 | l4
+K: Tehnički opis = tehnick | opis
+K: Tlocrti = tlocrt
+K: Tabele kablova i patch panela = tabel | kabl | patch
+K: Dispozicioni nacrti ormara = dispozic | nacrt | ormar
+PRAG: 3
+O: Sve od L0 (tehnički opis) do L4.
+O: Sadrži tlocrte, tabele kablova i patch panela, trase kanalica i dispozicione nacrte u komunikacijskim ormarima.
+---

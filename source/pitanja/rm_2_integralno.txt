@@ -1,0 +1,807 @@
+# =====================================================================
+#  STUDIOUS KNIGHT - Računarske mreže, nivo 2: Pitanja i odgovori RM integralno
+#  (integralni ispit). Izvor: "Pitanja_i_odgovori_RM_integralno(1).docx"
+#  Format: P: pitanje / K: pojam = alternative | ... / PRAG: n / O: red odgovora / ---
+#  Pitanja označena sa "odgovor dopunjen" nisu imala odgovor u skripti.
+# =====================================================================
+
+P: A klasa?
+K: Prvi oktet 0–127 = 0-127 | 0 do 127 | 1-126 | 1 do 126
+K: Počinje bitom 0 = bitom 0 | bit 0 | bitu 0 | sa 0 | nulom | 0 bit
+K: 1 oktet mreža, 3 okteta host = tri okteta | 3 okteta | prvi oktet | 1 oktet | jedan oktet
+K: 126 mreža = 126
+K: 2^24 – 2 hosta = 2^24 | 2 na 24 | 16777214 | 16.777.214
+K: Maska 255.0.0.0 = 255.0.0.0
+PRAG: 3
+O: Klasa A IP adresa obuhvata adrese kod kojih je prvi oktet u rasponu 0–127 i u binarnom zapisu uvijek počinje bitom 0.
+O: Kod ove klase prvi oktet predstavlja mrežni dio, dok preostala tri okteta čine host dio, što omogućava veliki broj uređaja u jednoj mreži.
+O: Postoji ukupno 126 mreža klase A, a svaka mreža ima 2^24 – 2 iskoristive IP adrese, pri čemu se ne računaju adresa mreže i broadcast adresa.
+O: Defaultna subnet maska klase A je 255.0.0.0.
+---
+
+P: B klasa?
+K: Prvi oktet 128–191 = 128-191 | 128 do 191
+K: Počinje bitovima 10 = bitovima 10 | bitovi 10 | bitima 10 | sa 10 | 10 bit
+K: 2 okteta mreža, 2 okteta host = dva okteta | 2 okteta | prva dva
+K: 2^14 (16.384) mreža = 16384 | 16.384 | 2^14 | 2 na 14
+K: 2^16 – 2 (65.534) hosta = 65534 | 65.534 | 2^16 | 2 na 16
+K: Maska 255.255.0.0 = 255.255.0.0
+PRAG: 3
+O: IP adrese klase B imaju prvi oktet u rasponu 128–191, a u binarnom zapisu započinju bitovima 10, koji su fiksni za ovu klasu.
+O: Kod klase B prva dva okteta čine mrežni (network) dio, dok preostala dva okteta predstavljaju host dio, što omogućava uravnotežen odnos broja mreža i hostova.
+O: Ukupno postoji 2^14 = 16.384 mreža klase B, a svaka mreža može imati 2^16 – 2 = 65.534 iskoristive IP adrese, bez adrese mreže i broadcast adrese.
+O: Defaultna subnet maska klase B je 255.255.0.0.
+---
+
+P: C klasa?
+K: Prvi oktet 192–223 = 192-223 | 192 do 223
+K: Počinje bitovima 110 = bitovima 110 | bitovi 110 | bitima 110 | sa 110 | 110 bit
+K: 3 okteta mreža, zadnji oktet host = tri okteta | 3 okteta | prva tri | posljednji oktet | zadnji oktet | jedan oktet | 1 oktet
+K: 2^21 (2.097.152) mreža = 2097152 | 2.097.152 | 2^21 | 2 na 21
+K: 2^8 – 2 (254) hosta = 254 | 2^8 | 2 na 8
+PRAG: 3
+O: IP adrese klase C imaju prvi oktet u rasponu 192–223, a u binarnom zapisu započinju bitovima 110, koji su fiksni za ovu klasu.
+O: Kod klase C prva tri okteta čine mrežni dio, dok posljednji oktet predstavlja host dio, zbog čega je broj hostova po mreži manji.
+O: Ukupan broj mreža klase C iznosi 2^21 = 2.097.152, a svaka mreža može imati 2^8 – 2 = 254 iskoristive IP adrese, bez adrese mreže i broadcast adrese.
+---
+
+P: Specijalne IP adrese? Navesti i opisati!
+K: Loopback = loopback | loop back | petlj
+K: 127.0.0.1 (opseg 127.x.x.x) = 127
+K: Testiranje / komunikacija sa samim sobom = samim sobom | sam sa sobom | sa sobom | testir
+K: 0.0.0.0 – defaultna ruta = 0.0.0.0 | default | podrazumijevan
+K: Link-local adrese = link-local | link local | linklocal | apipa
+K: Opseg 169.254.x.x = 169.254
+PRAG: 3
+O: Loopback adresa je specijalna IP adresa koju računar koristi za komunikaciju sa samim sobom radi testiranja mrežne funkcionalnosti, pri čemu se koristi adresni opseg 127.0.0.0 – 127.255.255.255, a najčešće 127.0.0.1.
+O: Adresa 0.0.0.0 predstavlja defaultnu rutu i koristi se kada računar ili router nema precizno definisanu rutu ka odredišnoj mreži, pa se sav nepoznati saobraćaj usmjerava ovom rutom.
+O: Link-local adrese se automatski dodjeljuju od strane operativnog sistema kada IP konfiguracija nije dostupna, kako bi se omogućila osnovna mrežna komunikacija, a koriste opseg 169.254.0.0 – 169.254.255.255.
+---
+
+P: Privatne IP adrese?
+K: Koriste se u lokalnim mrežama = lokaln | lan | unutar mrez | interne mrez | unutrasnj
+K: Nisu dostupne sa Interneta / sigurnost = nisu dostupn | nisu direktno | nedostupn | sigurn | javn
+K: NAT / PAT = nat | pat
+K: Klasa A: 10.0.0.0/8 = 10.0.0.0 | 10/8
+K: Klasa B: 172.16.0.0/12 = 172.16 | 172
+K: Klasa C: 192.168.0.0/16 = 192.168
+PRAG: 3
+O: Privatne IP adrese koriste se unutar lokalnih mreža i nisu direktno dostupne sa Interneta, čime se povećava sigurnost i smanjuje potreba za velikim brojem javnih IP adresa.
+O: Računari koji koriste privatne IP adrese mogu pristupati Internetu pomoću NAT ili PAT mehanizama, koji omogućavaju prevođenje privatnih adresa u javnu IP adresu.
+O: Privatni adresni opsezi su unaprijed definisani i obuhvataju klasu A (10.0.0.0/8), klasu B (172.16.0.0/12) i klasu C (192.168.0.0/16).
+---
+
+P: 3-way handshake?
+K: TCP = tcp
+K: Uspostava pouzdane konekcije = uspostav | konekcij | veza | vezu | veze | pouzdan
+K: Klijent šalje SYN = syn
+K: Server odgovara SYN-ACK = syn-ack | synack | syn ack | syn i ack
+K: Završni ACK = ack
+K: Sekvencijalni broj = sekvenc | redni broj | seq
+PRAG: 4
+O: 3-way handshake je postupak kojim TCP protokol uspostavlja pouzdanu konekciju prije razmjene podataka, kako bi se sinhronizovali učesnici u komunikaciji.
+O: Proces započinje tako što klijent šalje SYN segment zajedno sa početnim sekvencijalnim brojem, čime zahtijeva uspostavu konekcije i omogućava praćenje redoslijeda segmenata.
+O: Server odgovara SYN-ACK segmentom, kojim potvrđuje prijem klijentovog zahtjeva, šalje sopstveni sekvencijalni broj i definiše naredni očekivani segment.
+O: Konekcija se uspostavlja kada klijent pošalje završni ACK, nakon čega je veza aktivna i može započeti razmjena podatkovnih segmenata.
+O: Na sličan princip kao uspostava, TCP konekcija se i prekida, kroz razmjenu kontrolnih poruka između učesnika.
+---
+
+P: DNS?
+K: Domain Name System = domain name | domain | imena domen | sistem imena | sistem domen
+K: Prevodi ime domene u IP adresu = prevo | preved | pretvar | mapir | razrjes | razrijes
+K: IP adresa = ip
+K: Ljudima je lakše pamtiti imena = pamt | zapamt | ljud | covjek | korisni
+K: DNS server = server
+PRAG: 3
+O: DNS (Domain Name System) je servis koji omogućava prevođenje logičkog imena domene u IP adresu, što je neophodno za mrežnu komunikaciju.
+O: Iako računari komuniciraju isključivo putem IP adresa, ljudima je teško pamtiti numeričke vrijednosti, zbog čega se umjesto njih koriste nazivi domena.
+O: Kada korisnik unese ime domene, DNS server ga prevodi u odgovarajuću IP adresu, a tek nakon toga se mrežni zahtjev realizuje koristeći IP adresu.
+---
+
+P: SLAAC (Stateless Address Autoconfiguration)?
+K: Automatska konfiguracija IPv6 adresa = automatsk | autokonfig | auto konfig
+K: Bez centralnog (DHCP) servera = bez server | bez dhcp | bez centraln | bez potrebe
+K: Router Solicitation (RS) = solicitation | rs
+K: Router Advertisement (RA) = advertisement | ra
+K: Mrežni prefiks = prefiks | prefix
+K: Interface ID = interface | eui
+K: DAD (Duplicate Address Detection) = dad | duplicate | duplikat
+K: Router ne vodi evidenciju (stateless) = evidencij | ne pamti | ne prati | ne cuva | stateless
+PRAG: 4
+O: SLAAC (Stateless Address Autoconfiguration) omogućava automatsku konfiguraciju IPv6 adresa na hostovima bez potrebe za centralnim serverom.
+O: Host koristi Neighbor Discovery protokol (Router Solicitation poruku) da otkrije dostupne metode konfiguracije, a router odgovara Router Advertisement porukom koja sadrži mrežni prefiks i upute za generisanje Interface ID-a.
+O: Nakon generisanja Interface ID dijela, host koristi DAD (Duplicate Address Detection) kako bi provjerio da li je njegova adresa jedinstvena u mreži.
+O: Metoda se naziva stateless jer router ne vodi evidenciju o adresama koje je dodijelio hostovima, već samo šalje potrebne informacije za konfiguraciju.
+---
+
+P: Stateless DHCP konfigurisanje Ipv6 adresa (SLAAC + DHCP)?
+K: Router šalje RA (Router Advertisement) = advertisement | ra
+K: Prefiks, dužina prefiksa, default gateway = prefiks | prefix | gateway
+K: Dodatni parametri (DNS) od DHCP servera = dns | dodatn | dhcp server
+K: Link-local adresa = link-local | link local | linklocal
+K: Interface ID: random ili EUI-64 = eui | random | nasumi | slucajn
+K: DAD provjera jedinstvenosti = dad | duplicate | jedinstven
+K: ICMPv6 poruke (133 RS, 134 RA, 135/136) = icmp | 133 | 134 | 135 | 136
+K: Router Solicitation (RS) = solicitation | rs
+PRAG: 4
+O: Stateless DHCP za IPv6 kombinuje informacije od routera i DHCP servera, gdje router šalje RA (Router Advertisement) poruke sa mrežnim prefiksom, dužinom prefiksa i default gateway adresom, ali host dodatne parametre (npr. DNS) preuzima od DHCP servera.
+O: Host prvo generiše link-local adresu koristeći random ili EUI-64 metod za Interface ID, a zatim provjerava jedinstvenost adrese u mreži pomoću DAD (Duplicate Address Detection) protokola kroz ICMPv6 poruke (tip 135/136).
+O: Kada se adresa potvrdi kao jedinstvena, host je primjenjuje na interfejs i šalje Router Solicitation poruku (ICMP tip 133), na koju router odgovara RA porukom (ICMP tip 134).
+O: Host koristi informacije iz RA poruke da odluči na koji način da se konfigurira, tj. koje adrese i dodatne parametre preuzima od DHCP servera, čime se završava stateless DHCP konfiguracija.
+---
+
+P: Statefull DHCP?
+K: Host prima RA poruku = advertisement | ra
+K: M bit postavljen na 1 = m bit | m bitom | m bita | bit m | m flag | m zastav | m=1 | m = 1
+K: Sve informacije od DHCPv6 servera = dhcpv6 | dhcp v6 | dhcp server | sve konfig | sve inform
+K: Server: poseban uređaj ili sam router = poseban | sam router | ili router | i router
+K: Širi spektar opcija = siri | sire | sireg | sirok | vise opcij | vise konfig | spektar
+K: Router može biti i DHCP klijent i server = klijent
+PRAG: 3
+O: Stateful DHCP za IPv6 se koristi kada host primi RA (Router Advertisement) poruku sa postavljenim M bitom na 1, što znači da će sve konfiguracione informacije dobiti od DHCPv6 servera.
+O: DHCPv6 server može biti poseban uređaj u mreži ili sam router, a pruža širi spektar konfiguracionih opcija u odnosu na stateless metode.
+O: Važno je napomenuti da u nekim scenarijima router može istovremeno funkcionisati i kao DHCP klijent i kao DHCP server, zavisno od potrebe mreže.
+---
+
+P: Tunneling (tuneliranje)?
+K: IPv6 preko IPv4 mreže = ipv6 | ipv4
+K: IPv6 paket unutar IPv4 paketa = unutar | enkapsul | stavlja
+K: Dual-stack router = dual
+K: Izvlači se na odredištu = izvlac | izvadi | odredisn
+K: Povećana latencija = latenc | kasnjenj
+PRAG: 3
+O: Tuneliranje omogućava prenos IPv6 paketa preko IPv4 mreže tako što se IPv6 paket stavi unutar IPv4 paketa i pošalje do drugog dual-stack routera.
+O: Na odredišnom routeru IPv6 paket se izvlači iz IPv4 paketa i dalje se prosljeđuje u izvornom obliku.
+O: Omogućava kompatibilnost, ali povećava latenciju zbog dodatnog enkapsuliranja.
+---
+
+P: RAM routera?
+K: Routing tabela = routing | ruting | tabel
+K: ARP cache = arp
+K: Fast-switching cache = fast
+K: Running-config (trenutna konfiguracija) = running | trenutn
+K: IOS se dekompresuje u RAM = ios | operativ | dekompres
+K: Volatilna - gubi sadržaj = volatil | gub | privremen
+PRAG: 4
+O: RAM routera pohranjuje routing tabelu, ARP cache, fast-switching cache i trenutnu konfiguraciju (running-config).
+O: U RAM-u se nalazi i operativni sistem (IOS) koji se pri pokretanju dekompresuje i učitava.
+O: RAM je volatilna memorija - sadržaj se gubi kada se router isključi.
+---
+
+P: Flash memorija kod routera?
+K: Kompresovana IOS slika = ios
+K: Update bez zamjene čipa = update | cip | bez uklanjanj
+K: Čuva sadržaj bez napajanja = napajanj | trajn
+K: Više verzija IOS-a = vise verzij
+K: EEPROM = eeprom
+PRAG: 3
+O: Flash čuva kompresovanu IOS sliku i dozvoljava update IOS-a bez uklanjanja ili zamjene čipa.
+O: Čuva sadržaj i kada prestane napajanje; u zavisnosti od veličine može imati više verzija IOS-a.
+O: U pitanju je EEPROM tip memorije.
+---
+
+P: NVRAM routera?
+K: Startup konfiguracija = startup
+K: Trajna memorija = trajn | ne gub | nevolatil | non volatil
+K: Primijeni se kad se router upali = upali | pokret
+PRAG: 2
+O: NVRAM čuva startup konfiguracijski fajl - konfiguraciju koja se primijeni kada se router upali.
+O: NVRAM je trajna memorija - sadržaj se ne gubi ni nakon gašenja.
+---
+
+P: Kojih je 5 common (aplikacijski poznatih) portova?
+K: 21 FTP = 21 | ftp
+K: 23 Telnet = 23 | telnet
+K: 25 SMTP = 25 | smtp
+K: 80 HTTP = 80 | http
+K: 110 POP3 = 110 | pop
+K: 443 HTTPS = 443 | https
+PRAG: 5
+O: 21 - FTP, 23 - Telnet, 25 - SMTP, 80 - HTTP, 110 - POP3, 194 - IRC, 443 - HTTPS.
+---
+
+P: Uloga transportnog sloja?
+K: Preuzima podatke od aplikacija = aplikac
+K: Segmentacija = segment
+K: Rekonstrukcija na destinaciji = rekonstru | destinac | sastav
+K: Brojevi portova = port
+PRAG: 3
+O: Transportni sloj preuzima podatke od aplikacija i priprema ih za slanje, vršeći segmentaciju na izvorišnoj strani.
+O: Na destinacijskoj strani rekonstruiše segmente i dostavlja ih odgovarajućoj aplikaciji.
+O: Da bi razlikovao podatke različitih aplikacija koristi brojeve portova.
+---
+
+# (odgovor dopunjen - u skripti nije bilo odgovora)
+P: Prednosti VLAN-ova?
+K: Sigurnost = sigurn | bezbjed
+K: Manji broadcast domeni = broadcast
+K: Bolje performanse = performans | zagusen
+K: Logičko grupisanje nezavisno od lokacije = logick | lokacij | grupis
+K: Lakše upravljanje / niži troškovi = upravlj | troskov | jeftin | fleksib
+PRAG: 3
+O: VLAN-ovi povećavaju sigurnost jer odvajaju grupe korisnika i osjetljive podatke.
+O: Smanjuju broadcast domene, čime se smanjuje nepotreban saobraćaj i poboljšavaju performanse.
+O: Omogućavaju logičko grupisanje korisnika nezavisno od fizičke lokacije, lakše upravljanje mrežom i niže troškove.
+---
+
+# (odgovor dopunjen - u skripti nije bilo odgovora)
+P: Karakteristike MAC adrese?
+K: Fizička adresa mrežne kartice = fizick | mrezn kart | nic
+K: 48 bita = 48
+K: 12 heksadecimalnih cifara = 12 | heksa | hexa
+K: OUI (prva 24 bita, proizvođač, IEEE) = oui | proizvodj | ieee
+K: Jedinstvena = jedinstven
+K: Lokalni značaj / 2. sloj = 2. sloj | drug sloj | sloj veze | lokaln
+PRAG: 3
+O: MAC adresa je jedinstvena fizička adresa mrežne kartice dužine 48 bita, zapisana sa 12 heksadecimalnih cifara.
+O: Prva 24 bita (OUI) dodjeljuje IEEE proizvođaču, a ostatak je serijski broj kartice.
+O: Koristi se na sloju veze podataka (2. sloj) za adresiranje unutar lokalnog segmenta.
+---
+
+P: HTTP protokol?
+K: HyperText Transfer Protocol = hypertext | hyper text
+K: Web servisi i sadržaj = web
+K: Hyperlinkovi = hyperlink | link
+K: IETF i W3C, RFC 2616 = ietf | w3c | rfc
+K: Port 80 = 80
+K: Keep-alive = keep
+K: Metode GET, POST, PUT = get | post | put
+PRAG: 4
+O: HTTP (HyperText Transfer Protocol) omogućava korištenje web servisa i isporuku web sadržaja; hypertext koristi hyperlinkove za povezivanje dokumenata.
+O: Razvoj koordiniraju IETF i W3C; prvi standard je RFC 2616 (HTTP/1.1), danas HTTP/2.0.
+O: Klijent šalje request na port 80, server odgovara; keep-alive omogućava ponovnu upotrebu konekcije.
+O: Najčešće metode su GET, POST i PUT.
+---
+
+P: MIME?
+K: Multipurpose Internet Mail Extension = multipurpose | mail extension
+K: Proširuje SMTP format = smtp | prosir
+K: Audio, video, slike = audio | video | slik
+K: Tip i podtip sadržaja = tip | podtip
+PRAG: 3
+O: MIME (Multipurpose Internet Mail Extension) proširuje strukturu email poruka definisanu SMTP-om i omogućava slanje audio, video, slika i aplikacija.
+O: U poruku dodaje polje koje definiše tip i podtip sadržaja, pa klijent zna kojom aplikacijom da ga prikaže.
+---
+
+P: DHCP?
+K: Dynamic Host Configuration Protocol = dynamic host
+K: Automatska konfiguracija IP adresa = automatsk | konfigur
+K: Nadograđuje BOOTP = bootp
+K: Server ili ruter/switch = server | ruter | router
+K: Pool adresa = pool | raspon
+K: Exclude adrese = exclud | izuz
+K: Lease time = lease | zakup
+PRAG: 4
+O: DHCP (Dynamic Host Configuration Protocol) omogućava automatsku konfiguraciju IP adresa i drugih parametara, nadograđujući BOOTP.
+O: DHCP server može biti zasebna mašina ili mrežni uređaj (router/switch).
+O: Ključni parametri: IP adresni pool, exclude addresses (izuzete adrese, npr. gateway) i lease time (vrijeme zakupa).
+O: Može dodjeljivati i DNS, WINS i druge postavke.
+---
+
+P: Koje imamo vrste hubova?
+K: Aktivni = aktivn
+K: Pasivni = pasivn
+K: Inteligentni = inteligent
+PRAG: 3
+O: Postoje aktivni, pasivni i inteligentni hubovi.
+---
+
+P: Koliko ima flagova kod dinamičke dodjele IP adresa u IPv6 i kako rade?
+K: Dva flaga = dva | 2 flag
+K: M flag = m flag | m bit | m =
+K: O flag = o flag | o bit | o =
+K: M=0, O=0 SLAAC = slaac
+K: M=0, O=1 stateless DHCP = stateless | slaac + dhcp
+K: M=1 stateful DHCP = stateful | statefull
+PRAG: 4
+O: Postoje dva flaga - M i O - koji hostu određuju način automatske konfiguracije.
+O: M=0, O=0 - samo SLAAC; M=0, O=1 - SLAAC + DHCP (stateless DHCP); M=1, O=1 - stateful DHCP; M=1, O=0 - stateful DHCP (samo IP, prefiks i gateway).
+O: Prva poruka uvijek ide routeru radi otkrivanja moda.
+---
+
+P: Subnetiranje?
+K: Dijeljenje adresnog bloka na manje mreže = dijel | manj mrez | podmrez
+K: Efikasnije korištenje adresa = efikasn | gubit
+K: Bitovi iz host dijela u network dio = host | posudj | bit
+K: Maska odstupa od default = maska | default
+PRAG: 3
+O: Subnetiranje je dijeljenje jednog IP adresnog bloka na više manjih mreža radi interne organizacije, dok vanjski svijet vidi jednu cjelinu.
+O: Efikasnije se koristi adresni prostor.
+O: Određeni bitovi iz host dijela se dodjeljuju network dijelu; mreža je subnetirana ako maska odstupa od default maske klase.
+---
+
+P: Kako radi NAT (Network Address Translation)?
+K: Privatne u javne adrese = privatn | javn
+K: Pristup Internetu = internet
+K: Dva interfejsa = dva interfejs | dva interfej
+K: Izgleda kao da NAT uređaj inicira = inicir | kao da
+K: Odgovor nazad originalnom hostu = nazad | original | odgovor
+PRAG: 3
+O: NAT prevodi privatne IP adrese u javne, omogućavajući uređajima u lokalnoj mreži pristup Internetu.
+O: NAT uređaj ima dva interfejsa - privatni (lokalna mreža) i javni (Internet).
+O: Zahtjev hosta prosljeđuje preko javnog interfejsa kao da ga sam inicira, a odgovore preusmjerava nazad originalnom hostu.
+---
+
+P: Kako radi PAT (Port Address Translation)?
+K: Oblik NAT-a = nat
+K: Više privatnih adresa - jedna javna = vise | jedn javn | jednu javn
+K: Mijenja brojeve portova = port
+K: Razlikuje sesije = sesij
+PRAG: 3
+O: PAT je oblik NAT-a koji omogućava da više privatnih IP adresa koristi jednu javnu IP adresu.
+O: Mijenja brojeve portova, čime se razlikuju sesije različitih uređaja iza iste javne adrese.
+---
+
+P: Sloj veze podataka?
+K: Formiranje okvira = okvir | frame
+K: Kontrola toka = kontrol tok | tok podat
+K: Detekcija i ispravljanje grešaka = gresk | detekc
+K: Kapsulira pakete mrežnog sloja = kapsul | paket
+K: Header, payload, trailer = header | zaglavlj | payload | trailer
+PRAG: 3
+O: Sloj veze podataka kontroliše komunikaciju između uređaja: formiranje okvira, kontrola toka, detekcija i ispravljanje grešaka.
+O: Operiše sa okvirima koji kapsuliraju pakete iz mrežnog sloja.
+O: Okvir sadrži zaglavlje (header), korisničke podatke (payload) i završni blok (trailer).
+---
+
+P: Komutirani Ethernet?
+K: Switch je jezgro = switch | svic
+K: Backplane = backplane | sabirnic
+K: Dedikovana veza portova = dedikov | direktn
+K: Manje kolizija, veća propusnost = kolizij | propusn
+K: Šalje samo na odredišni port = samo na | odredisn
+PRAG: 3
+O: Komutirani Ethernet koristi switch kao jezgro; portovi komuniciraju preko brze unutrašnje sabirnice (backplane).
+O: Switch omogućava direktnu vezu izvorišnog i odredišnog porta, smanjuje kolizije i povećava propusnost.
+O: Za razliku od huba, podatke šalje samo na odredišni port.
+---
+
+P: Svič (switch)?
+K: Lako dodavanje stanica = dodavanj | lako
+K: Šalje samo na odredišne priključke = odredisn | samo
+K: Svaki port je kolizijski domen = kolizij
+K: Istovremeni prenos = istovremen
+K: Baferovanje = bafer | memorij | buffer
+PRAG: 3
+O: Svič ima prednosti huba (jednostavno dodavanje stanica, kvar ograničen na jednu stanicu).
+O: Okvire šalje samo na odredišne priključke - svaki port je zaseban kolizijski domen, pa nema kolizija.
+O: Omogućava istovremeni prenos okvira različitih stanica i koristi memoriju (buffering) za privremeno čuvanje okvira.
+---
+
+P: Router?
+K: Prosljeđivanje paketa = prosljedj
+K: Najbolji put = najbolj
+K: Routing tabela = tabel
+K: Mreže i interfejsi = interfejs
+PRAG: 3
+O: Router je mrežni uređaj čija je primarna funkcija prosljeđivanje paketa i odabir najboljeg puta do odredišne mreže.
+O: Koristi routing tabelu sa listom dostupnih mreža i interfejsa preko kojih se do njih dolazi.
+---
+
+P: Prenos podataka bez uspostavljanja direktne veze i bez potvrde o prijemu?
+K: Bez potvrde = bez potvrd
+K: Bez logičke veze = bez vez | bez logick | bez uspostav
+K: Ne ispravlja greške - viši slojevi = visi sloj | visim sloj | ne ispravl
+K: Mala učestalost grešaka = mala | ucestal
+K: Saobraćaj u realnom vremenu (glas) = realn | glas
+PRAG: 3
+O: Izvorišni računar šalje okvire bez zahtjeva za potvrdu i bez uspostavljanja logičke veze.
+O: Ako se okvir izgubi, sloj veze ne registruje grešku - pouzdanost se prepušta višim slojevima.
+O: Pogodno kada je učestalost grešaka mala i za saobraćaj u realnom vremenu (npr. glas).
+---
+
+P: Prenos podataka bez uspostavljanja direktne veze sa potvrdom o prijemu?
+K: Potvrda za svaki okvir = potvrd
+K: Bez logičke veze = bez vez | ne uspostav | bez logick
+K: Ponovno slanje ako nema potvrde = ponovno | ponovo
+K: Bučni / bežični kanali = bucn | bezic
+K: WiFi 802.11 = wifi | 802.11
+PRAG: 3
+O: Pošiljalac dobija potvrdu da je svaki okvir ispravno primljen, ali se ne uspostavlja logička veza.
+O: Ako potvrda ne stigne u zadanom intervalu, okvir se šalje ponovo.
+O: Pogodno za bučne kanale, posebno bežične mreže (WiFi 802.11).
+---
+
+P: Prenos podataka sa uspostavljanjem direktne veze i sa potvrdom o prijemu?
+K: Prvo se uspostavi logička veza = uspostav | logick
+K: Okviri numerisani = numeris | broj
+K: Tačno jednom, ispravan redoslijed = tacno jednom | redoslijed
+K: Duge nepouzdane veze (satelit) = satelit | dug
+K: Tri faze: inicijalizacija, prenos, zatvaranje = inicijaliz | zatvaranj | tri faz
+PRAG: 3
+O: Izvorišni i odredišni računar prvo uspostave logičku vezu; svaki okvir se numeriše i garantuje se prijem tačno jednom i u ispravnom redoslijedu.
+O: Pogodno za duge i nepouzdane veze (satelitski kanali, daleka telefonska kola).
+O: Tri faze: inicijalizacija, prenos podataka i zatvaranje veze.
+---
+
+P: Koliko ima heksteta (grupa heksadecimalnih brojeva) IPv6 adresa?
+K: Osam = osam | 8
+PRAG: 1
+O: Osam.
+---
+
+P: FCS (Frame Check Sequence)?
+K: Verifikacijska vrijednost u okviru = verifik | provjer
+K: Ista funkcija na izvoru i odredištu, poređenje = uspored | poredj | ista funkcij
+K: CRC = crc | cyclic
+K: Dvodimenzionalni paritet = paritet
+K: Internet checksum = checksum
+PRAG: 3
+O: FCS je polje okvira sa verifikacijskom vrijednošću kojom destinacija provjerava da li je okvir ispravno prenesen.
+O: Izvor računa vrijednost matematičkom funkcijom nad bitovima, destinacija ponavlja i upoređuje - podudaranje znači da okvir nije oštećen.
+O: Načini računanja: CRC, dvodimenzionalni paritet i Internet checksum.
+---
+
+P: Koji protokoli spadaju u transportni sloj?
+K: TCP = tcp
+K: UDP = udp
+PRAG: 2
+O: TCP i UDP.
+---
+
+# (odgovor dopunjen - u skripti nije bilo odgovora)
+P: VLAN predstavlja logičku grupu uređaja?
+K: Da = da
+K: Logička grupa nezavisno od fizičke lokacije = logick | lokacij | nezavisn
+K: Poseban broadcast domen = broadcast
+PRAG: 2
+O: Da - VLAN je logička grupa uređaja koji komuniciraju kao da su na istom LAN-u, nezavisno od fizičke lokacije.
+O: Svaki VLAN je poseban broadcast domen.
+---
+
+P: Šta je FTTP?
+K: Fiber to the premises = premises
+K: FTTH - fiber to the home = home | ftth
+K: Optika do objekta = fiber | optick
+PRAG: 2
+O: Fiber to the premises (ili FTTH - Fiber to the home) - optičko vlakno dovedeno do objekta korisnika.
+---
+
+P: Tip konektora kod 10BASE5 kabla?
+K: AUI = aui
+K: Attachment Unit Interface = attachment
+PRAG: 1
+O: AUI (Attachment Unit Interface).
+---
+
+P: Koji je sloj na kojem se radi s okvirima (frames)?
+K: Sloj veze podataka = veze podataka | data link | sloj veze
+PRAG: 1
+O: Sloj veze podataka (Data link layer).
+---
+
+# (odgovor dopunjen - u skripti nije bilo odgovora)
+P: Kontrola dijaloga je na kojem sloju OSI modela?
+K: Sesijski sloj = sesij | session
+K: 5. sloj = 5. sloj | peti
+PRAG: 1
+O: Na sesijskom (5.) sloju OSI modela - on uspostavlja, održava i prekida sesije i upravlja dijalogom.
+---
+
+P: Koliko se najmanje bita može koristiti u host dijelu za subnetiranje?
+K: Dva = dva | 2
+PRAG: 1
+O: Dva.
+---
+
+P: Da li tokom svakog novog subnetiranja gubimo po dvije adrese?
+K: Ne = ne
+PRAG: 1
+O: Ne.
+---
+
+P: Subnetiranje je "posuđivanje" bitova iz host dijela u network dio?
+K: Da = da
+K: Iz host dijela u network dio = host | network | mrezn
+PRAG: 1
+O: Da.
+---
+
+P: Koji su to protokoli koji nam omogućavaju slanje i primanje emailova?
+K: SMTP = smtp
+K: Port 25 = 25
+K: POP3 = pop
+K: Port 110 = 110
+PRAG: 2
+O: SMTP za slanje emailova (TCP port 25).
+O: POP3 za primanje emailova (port 110).
+---
+
+P: Kojem OSI sloju pripada mrežna kartica?
+K: Sloj veze podataka = veze podataka | data link | sloj veze | 2. sloj | drugom
+PRAG: 1
+O: Sloju veze podataka (Data link layer).
+---
+
+P: Ko izdaje identifikator OUI?
+K: IEEE = ieee
+K: Organizationally Unique Identifier = organizationally | unique
+PRAG: 1
+O: OUI (Organizationally Unique Identifier) izdaje IEEE.
+---
+
+# (odgovor dopunjen - u skripti nije bilo odgovora)
+P: Gateway je izlazna tačka prema drugim mrežama?
+K: Da = da
+K: Ruter / default gateway = ruter | router | default
+K: Prema drugim mrežama = drug mrez | izlaz
+PRAG: 1
+O: Da - gateway (najčešće ruter, default gateway) je izlazna tačka lokalne mreže prema drugim mrežama.
+---
+
+P: Koja je maksimalna brzina prenosa podataka koju može postići 802.11ac?
+K: 1300 Mb/s = 1300
+K: Realno 162,5 Mb/s = 162
+PRAG: 1
+O: Teoretski 1300 Mb/s (realno oko 162,5 Mb/s).
+---
+
+P: Da li je slanje potvrde o uspješnom prenosu okvira kod sloja veze podataka obavezno ili predstavlja optimizaciju?
+K: Optimizacija = optimiz
+PRAG: 1
+O: Predstavlja optimizaciju.
+---
+
+P: Koje VTP modove switch-eva poznaješ?
+K: Server mode = server
+K: Client mode = client | klijent
+K: Transparent mode = transparent
+K: Off = off
+PRAG: 3
+O: Server mode, Client mode, Transparent mode i Off.
+---
+
+P: Koji tipovi mreže postoje na sloju veze podataka?
+K: Broadcast (neusmjerene) mreže = broadcast | neusmjer
+K: Jedan kanal dijele svi = jedan | dijel
+K: Point-to-point mreže = point
+K: Veze među parovima računara = parovim | parov
+PRAG: 2
+O: Neusmjerene (broadcast) mreže - jedan komunikacijski kanal dijele svi računari u mreži.
+O: Point-to-point mreže - postoji više veza među pojedinim parovima računara.
+---
+
+P: Koji se protokoli/servisi oslanjaju na UDP?
+K: DNS = dns
+K: SNMP = snmp
+K: DHCP = dhcp
+K: RIP = rip
+K: TFTP = tftp
+K: Online igre = igr | games
+PRAG: 4
+O: DNS, SNMP, DHCP, RIP, TFTP i online igre.
+---
+
+P: Koje su metode koje prijemniku olakšavaju otkrivanje početka novih okvira?
+K: Prebrojavanje bajtova = prebroj
+K: Indikatorski bajt (flag byte) = indikator | flag
+K: Umetanje bajtova (byte stuffing) = byte stuff | umetanj bajt
+K: Umetanje bitova (bit stuffing) = bit stuff | umetanj bit
+PRAG: 3
+O: Prebrojavanje bajtova; indikatorski bajt (flag byte); umetanje bajtova (byte stuffing); umetanje bitova (bit stuffing).
+---
+
+P: IEEE dijeli sloj veze podataka na koja dva podsloja?
+K: MAC podsloj = mac
+K: LLC podsloj = llc
+PRAG: 2
+O: Podsloj kontrole pristupa medijima (MAC) i podsloj kontrole logičke veze (LLC).
+---
+
+P: Koji su protokoli za višekorisnički pristup (dodjeljivanje zajedničkog kanala)?
+K: ALOHA = aloha
+K: Carrier Sense protokoli (CSMA) = carrier | csma | oslusk
+PRAG: 2
+O: ALOHA i protokoli sa osluškivanjem nosioca podataka (Carrier Sense Protocols).
+---
+
+P: Koje vrste ALOHA-e poznajete?
+K: Čista ALOHA = cist | pure
+K: Vremenski raspodijeljena (Slotted) ALOHA = slotted | vremensk | raspodijel
+PRAG: 2
+O: Čista ALOHA i vremenski raspodijeljena ALOHA (Slotted ALOHA).
+---
+
+P: Protokoli po kojima stanice osluškuju nosioca podataka?
+K: 1-trajni CSMA (1-persistent) = 1-persistent | 1 persistent | 1-trajn | 1 trajn
+K: Non-persistent CSMA = non | povremen
+K: p-persistent CSMA = p-persistent | p persistent
+PRAG: 3
+O: 1-trajni CSMA (1-persistent), non-persistent CSMA i p-persistent CSMA.
+---
+
+P: Kako radi 1-trajni CSMA (1-persistent)?
+K: Emituje s vjerovatnoćom 1 = vjerovatnoc | verovatnoc | 1
+K: Kada je kanal prazan = prazan | slobodan
+PRAG: 2
+O: Stanica emituje s vjerovatnoćom 1 čim utvrdi da je kanal prazan.
+---
+
+P: Kako radi non-persistent CSMA?
+K: Ne osluškuje neprekidno = ne neprekidno | nece neprekidno | ne oslusk
+K: Nasumično odabran interval = nasumic | slucajn | random
+K: Ponovo osluškuje = ponovo
+PRAG: 2
+O: Stanica neće neprekidno osluškivati kanal da ga zgrabi čim se oslobodi, već ga ponovo osluškuje tek nakon nasumično odabranog vremenskog intervala.
+---
+
+P: Kako radi CSMA/CD (CSMA uz otkrivanje kolizije)?
+K: Ethernet = ethernet
+K: Provjera da li je medij slobodan = slobodan | provjer | oslusk
+K: Kolizija pri istovremenom slanju = kolizij
+K: Prekida slanje = prekid
+K: Nasumičan interval prije ponovnog slanja = nasumic | slucajn | random | ceka
+PRAG: 4
+O: CSMA/CD je metoda pristupa mediju u tradicionalnim Ethernet mrežama.
+O: Stanice prvo provjeravaju da li je medij slobodan prije slanja.
+O: Ako dvije stanice emituju istovremeno nastaje kolizija; stanica koja je otkrije prekida slanje i čeka nasumičan interval prije ponovnog pokušaja.
+---
+
+P: Kako radi Token Ring?
+K: Token - dozvola za slanje = token
+K: Stanice u prstenu = prsten
+K: Ciklični redoslijed = ciklic | sljedec | sledec
+K: Prosljeđuje token ako nema podataka = prosljedj
+K: Deterministički, bez kolizija = determinist | bez kolizij | sprecava kolizij
+PRAG: 3
+O: Token Ring koristi token - specijalnu pristupnu riječ koja stanici daje dozvolu za slanje.
+O: Stanice su povezane u prsten, token se kreće od stanice do stanice ciklično; stanica bez podataka ga odmah prosljeđuje.
+O: Pristup je kontrolisan i deterministički - samo vlasnik tokena šalje, pa nema kolizija.
+---
+
+P: Šta je Token Bus?
+K: Token za kontrolu slanja = token
+K: Nije potreban fizički prsten = nije potreban | fizick
+K: Fizički bus, logički redoslijed = bus | logick
+K: Bez kolizija = kolizij | determinist
+PRAG: 3
+O: Token Bus je metoda pristupa mediju koja koristi token, ali bez fizičkog prstena.
+O: Mreža fizički izgleda kao bus, a logički se stanice slažu u redoslijed kojim se token prenosi.
+O: Samo stanica sa tokenom šalje, čime se sprečavaju kolizije.
+---
+
+P: Šta je ripiter (repeater)?
+K: Uređaj fizičkog sloja = fizick
+K: Pojačava/regeneriše signal = pojac | regener
+K: Produžava domet = domet | produz
+K: Uvodi malo kašnjenje = kasnjenj
+PRAG: 3
+O: Repeater je uređaj fizičkog sloja koji prima signal, pojačava ili regeneriše ga i šalje dalje.
+O: Radi u oba smjera i produžava domet mreže; uvodi malo kašnjenja, ali poboljšava kvalitet prenosa.
+---
+
+P: Koja su dva režima rada bežičnih LAN-ova?
+K: Infrastrukturni režim = infrastruktur
+K: Access Point = access point | pristupn tack
+K: Ad hoc režim = ad hoc | adhoc
+K: Direktno bez pristupne tačke = direktn | bez pristupn
+PRAG: 3
+O: Infrastrukturni režim - svaki klijent je povezan na pristupnu tačku (Access Point) koja je spojena na ostatak mreže.
+O: Ad hoc režim - računari direktno razmjenjuju okvire bez pristupne tačke (privremena mreža, bez direktnog pristupa Internetu).
+---
+
+P: Kako radi CSMA/CA?
+K: Collision Avoidance = avoid | izbjeg | izbeg
+K: Bežične mreže (WiFi) = bezic | wifi | wireless
+K: Provjera medija i nasumično čekanje = nasumic | slucajn | ceka
+K: Potvrda ACK = ack | potvrd
+K: Kolizije se teško detektuju = tesko | detekt
+PRAG: 3
+O: CSMA/CA (Collision Avoidance) se koristi u bežičnim mrežama (WiFi) da spriječi kolizije prije nego nastanu.
+O: Stanica provjeri medij i čeka nasumično vrijeme; ako ostane slobodan šalje podatke i čeka potvrdu (ACK).
+O: Pogodno za bežične kanale gdje se kolizije teško detektuju.
+---
+
+P: STP kabl?
+K: Shielded Twisted Pair = shielded
+K: Uvijene parice = paric | uvij
+K: Metalna zaštita/folija = metal | folij | oklop | zastit
+K: Smanjuje elektromagnetne smetnje = elektromagnet | smetnj | emi
+K: 150 oma = 150
+PRAG: 3
+O: STP (Shielded Twisted Pair) koristi uvijene parice i metalnu zaštitu za smanjenje elektromagnetnih smetnji.
+O: Svaki par je omotan metalnom folijom, a parovi mogu biti dodatno umotani u zajedničku pletenicu/foliju.
+O: Tipična impedancija je 150 oma.
+---
+
+P: ScTP?
+K: Screened Twisted Pair = screened
+K: FTP (Foiled Twisted Pair) = ftp | foiled
+K: UTP umotan u foliju = foli | utp
+K: 100 oma = 100
+K: Kombinuje fleksibilnost UTP i zaštitu STP = fleksib | stp
+PRAG: 3
+O: ScTP (Screened Twisted Pair), poznat i kao FTP (Foiled Twisted Pair), je klasični 100-omski UTP kabl umotan u metalnu foliju.
+O: Kombinuje fleksibilnost UTP-a sa zaštitom od smetnji sličnoj STP-u.
+---
+
+P: UTP?
+K: Četiri para žica = cetiri | 4 par | osam zic | 8 zic
+K: Izolator na svakoj žici = izolat
+K: Uvrnute u parove = uvrc | uvrn | par
+K: Smanjenje EMI i RFI = emi | rfi | smetnj
+PRAG: 3
+O: UTP je medij sa četiri para žica - svaka od osam žica je prevučena izolatorom.
+O: Po dvije žice se uvrću jedna oko druge u par radi smanjenja degradacije signala usljed EMI i RFI.
+---
+
+P: Jezgro optičkog vlakna mora imati veći indeks refrakcije od omotača?
+K: Da = da
+K: Totalna unutrašnja refleksija = refleks
+PRAG: 1
+O: Da (zbog toga dolazi do totalne unutrašnje refleksije svjetlosti).
+---
+
+P: Načini na koje se pomoću radio talasa predstavljaju binarne vrijednosti?
+K: Fazna modulacija (PSK) = fazn | psk
+K: Frekventna modulacija (FSK) = frekvent | fsk
+K: Amplitudna modulacija (ASK) = amplitud | ask
+PRAG: 3
+O: Fazna modulacija (PSK) - promjena faze predstavlja 1 ili 0.
+O: Frekventna modulacija (FSK) - niža i viša frekvencija predstavljaju dvije binarne vrijednosti.
+O: Amplitudna modulacija (ASK) - promjena amplitude prenosi binarnu informaciju.
+---
+
+P: Protokoli na 3. (Network) sloju?
+K: IPv4 = ipv4
+K: IPv6 = ipv6
+K: IPX = ipx
+K: AppleTalk = apple
+K: CLNS/DECnet = clns | decnet
+PRAG: 3
+O: IPv4, IPv6, IPX (stariji), AppleTalk (Macintosh mreže) i CLNS/DECnet.
+---
+
+P: Zadatak/uloga 3. sloja (Network sloj)?
+K: End-to-end konektivnost = end to end | konektivn
+K: Rutiranje = rutir | routing
+K: Odabir putanje = putanj | odabir
+K: Prosljeđivanje paketa = prosljedj
+K: IP adrese = ip
+PRAG: 3
+O: Mrežni sloj obezbjeđuje end-to-end konektivnost između udaljenih destinacija preko više mreža.
+O: Glavna funkcija je rutiranje: odabir najbolje putanje i prosljeđivanje paketa tom putanjom.
+O: Koristi IP adrese za identifikaciju izvora i odredišta.
+---
+
+P: Upredene parice (twisted pair)?
+K: Dvije izolovane žice = dvije | izolov
+K: Spiralno uvijene = spiral | uvij
+K: Poništavanje smetnji = ponist | smetnj
+K: Efikasno i ekonomično (LAN, telefoni) = ekonomic | efikasn | telefon | lokaln
+PRAG: 3
+O: Upredena parica se sastoji od dvije izolovane žice (oko 1 mm) spiralno uvijene jedna oko druge.
+O: Uvijanje poništava elektromagnetne smetnje i smanjuje zračenje signala.
+O: Efikasna i ekonomična za lokalne mreže i telefonske sisteme.
+---
+
+P: Najčešće korišteni aplikacijski protokoli?
+K: FTP = ftp
+K: HTTP = http
+K: SMTP = smtp
+K: DNS = dns
+K: TFTP = tftp
+PRAG: 4
+O: FTP, HTTP, SMTP, DNS, TFTP.
+---
+
+P: Koja su 3 glavna tipa IPv6 adresa?
+K: Unicast = unicast
+K: Multicast = multicast
+K: Anycast = anycast
+PRAG: 3
+O: Unicast, Multicast i Anycast.
+---
+
+P: Nabrojati 5 protokola i za šta služe.
+K: HTTP (80) = http
+K: SMTP (25) = smtp
+K: POP (110) = pop
+K: Telnet (23) = telnet
+K: FTP (21) = ftp
+PRAG: 4
+O: HTTP - port 80 - korištenje web servisa i isporuka sadržaja klijentima.
+O: SMTP - port 25 - slanje mail poruka; POP - port 110 - primanje poruka.
+O: Telnet - port 23 - povezivanje i administracija udaljenog uređaja.
+O: FTP - port 21 - premještanje datoteka između hostova.
+---

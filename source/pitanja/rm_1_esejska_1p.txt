@@ -1,0 +1,845 @@
+# =====================================================================
+#  STUDIOUS KNIGHT - Računarske mreže, nivo 1: RM Esejska - 1P
+#  (prva parcijala). Izvor: "RM Esejska- 1P.docx"
+#  Format: P: pitanje / K: pojam = alternative | ... / PRAG: n / O: red odgovora / ---
+# =====================================================================
+
+P: Objasni pojam paket.
+K: Osnovna jedinica komunikacije = osnovna jedinic | jedinica mrez | jedinica komunik
+K: Okvir (frame) = okvir | frame
+K: Header (zaglavlje) = header | zaglavlj
+K: Trailer (podnožje) = trailer | podnozj
+K: Prenose se neovisno = neovisn | nezavisn
+K: Primalac rekonstruiše poruku = rekonstru | redoslijed | slaze
+PRAG: 3
+O: Paket (okvir) je osnovna jedinica mrežne komunikacije - podaci se rastavljaju u manje cjeline kojima se lakše rukuje (packet ili frame).
+O: Paket se sastoji od korisničkih informacija, headera (zaglavlja) i trailera (podnožja).
+O: Paketi se prenose neovisno, a primalac ih postavlja u ispravan redoslijed i rekonstruiše poruku.
+O: Paketi sadrže kontrolne informacije koje omogućavaju kontrolu ispravnosti paketa.
+---
+
+P: Store and Forward transmisija?
+K: Dodatni uređaj između tačaka = dodatn | posredn | izmedju | između
+K: Podatak se sačuva pa pošalje = sacuva | čuva | pohran | store
+K: A šalje C preko B = preko racunara b | preko b | indirektn
+K: Kada su uređaji udaljeni / bez direktne veze = udaljen | nemaju direktn | bez direktn
+PRAG: 2
+O: Store & Forward je tehnika prenosa gdje između početne i krajnje tačke postoji dodatni uređaj u kojem se podatak sačuva prije nego što se pošalje na krajnju tačku (računar A šalje poruke računaru C preko računara B).
+O: Koristi se kada su dva krajnja uređaja geografski udaljena ili nemaju direktnu vezu.
+---
+
+P: Šta je ALOHA?
+K: Mreža sa višestrukim pristupom = visestruk | multiple access
+K: Radio prenos = radio
+K: Ista uzvodna frekvencija = ista | istu | uzvodn | frekvencij
+K: Nadmetanje za zajednički kanal = nadmet | zajednick | jedinstven
+K: Čista i vremenski raspodijeljena ALOHA = cist | vremensk | slotted | raspodijel
+PRAG: 3
+O: ALOHA je mreža sa višestrukim pristupom koja je za prenos koristila radio - svi terminali su za slanje okvira centralnom računaru koristili istu uzvodnu frekvenciju.
+O: Ideja je primjenjiva na svaki sistem u kome se nezavisni korisnici nadmeću za korištenje jedinstvenog zajedničkog kanala.
+O: Postoje čista ALOHA (kontinualno vrijeme) i vremenski raspodijeljena ALOHA (vrijeme izdijeljeno u intervale).
+---
+
+P: Šta je entitet?
+K: Apstraktni uređaj = apstrakt
+K: Ulaz = ulaz
+K: Izlaz = izlaz
+K: Komuniciraju razmjenom poruka = poruk | razmjen | komunic
+PRAG: 3
+O: Entitet je apstraktni uređaj koji djeluje pod dejstvom ulaza, izvršava neke aktivnosti i generiše izlaz.
+O: Kad je izlaz entiteta A povezan sa ulazom entiteta B, kaže se da A i B komuniciraju - razmjenom poruka.
+---
+
+P: Šta je protokol?
+K: Pravila = pravil
+K: Razmjena informacija = razmjen | komunik
+K: Isti sloj = isti sloj | istom sloj | istog sloj
+K: Različiti hostovi = razlicit | drug host | dva host
+PRAG: 2
+O: Protokoli su pravila za razmjenu informacija između dva slojna entiteta na istom sloju, ali na različitim hostovima.
+---
+
+P: Nabrojati 5 protokola i za šta služe.
+K: HTTP (80) = http
+K: SMTP (25) = smtp
+K: POP3 (110) = pop
+K: IMAP (143) = imap
+K: Telnet (23) = telnet
+K: FTP (21) = ftp
+PRAG: 4
+O: HTTP (port 80) - korištenje web servisa i isporuka web sadržaja klijentima.
+O: SMTP (port 25) - slanje email poruka od klijenta do servera.
+O: POP (port 110) i IMAP (port 143/993) - prenos email poruka od servera do klijenta.
+O: TELNET (port 23) - povezivanje i administracija udaljenog uređaja.
+O: FTP (port 21) - premještanje datoteka s jednog hosta na drugi.
+---
+
+P: Statička i dinamička informacija?
+K: Statička - konačan broj bita = konacn | fiksn
+K: Bit file = bit file | skupina bita
+K: Primjer: tekst, slika = tekst | slik
+K: Dinamička - mijenja se u vremenu = mijenj | menja | tokom vremena
+K: Bit stream (povorka impulsa) = bit stream | povork | impuls | stalni prenos
+PRAG: 3
+O: Statičke informacije su predstavljene konačnim brojem bita i prenose se kao skupina bita (bit file) - npr. tekst ili nepokretna slika.
+O: Dinamičke informacije se mijenjaju tokom vremena i zahtijevaju stalni prenos bita određenom brzinom - prenose se kao povorka impulsa (bit stream).
+---
+
+P: Šta je digitalizacija?
+K: Analogni u digitalni = analog
+K: Uzorkovanje (sampliranje) = uzork | sampl
+K: Kvantizacija = kvantiz
+K: Kodiranje = kodir
+K: PCM = pcm | impulsno kodn
+PRAG: 3
+O: Digitalizacija je proces pretvaranja analognog signala u digitalni, u 3 koraka:
+O: Uzorkovanje (sampliranje) - uzimanje uzoraka analognog signala u ravnomjernim intervalima.
+O: Kvantizacija - zaokruživanje amplitude uzoraka na najbližu diskretnu vrijednost.
+O: Kodiranje - predstavljanje uzoraka binarnim vrijednostima. Najrasprostranjenija metoda A/D konverzije je impulsno-kodna modulacija (PCM).
+---
+
+P: Šta su sinhroni i asinhroni komunikacijski servisi?
+K: Sinhroni - fiksno kašnjenje = fiksn | stalno kasnj
+K: Poznata frekvencija greške = frekvencij | greske | grešk
+K: Asinhroni dijeli podatke u pakete = paket
+K: Paketi neovisno, različito kašnjenje = neovisn | razlicit | nezavisn
+PRAG: 3
+O: Sinhroni komunikacijski servisi garantuju isporuku sa fiksnim kašnjenjem i poznatom frekvencijom greške.
+O: Asinhroni servis dijeli podatke u pakete; svaki paket se prenosi neovisno, sa različitim kašnjenjem i frekvencijom grešaka.
+---
+
+P: Šta su konektivni i nekonektivni (komunikacijski) servisi?
+K: Virtuelna konekcija = virtuel | konekcij | vez
+K: Ispravan redoslijed = redoslijed | redosled
+K: Bez greške = bez gres | bez grešk
+K: Nekonektivni - svaki paket neovisno = neovisn | nezavisn
+K: Bez garancije isporuke = ne garant | ni da ce | nije garant | bez garanc
+PRAG: 3
+O: Konektivni servis ostvaruje virtuelnu konekciju između pošiljaoca i primaoca i garantuje isporuku paketa u ispravnom redoslijedu i bez greške.
+O: Nekonektivni servis svaki paket šalje neovisno, pa se ne garantuje ispravan redoslijed, ispravnost, pa čak ni isporuka paketa.
+---
+
+P: Šta su konektivne i nekonektivne usluge?
+K: Uspostavljaju i održavaju vezu = uspostav | odrzav
+K: Krajnji učesnici = krajnj | ucesnik
+K: Nekonektivne - bez uspostave veze = bez uspostav | bez vez
+PRAG: 2
+O: Konektivne usluge uspostavljaju i održavaju vezu između krajnjih učesnika, preko koje se prenose podaci.
+O: Nekonektivnu uslugu karakteriše prenos podataka bez uspostavljanja veze između krajnjih učesnika.
+---
+
+P: Šta je enkapsulacija?
+K: Iz gornjeg u donji sloj = gornj | visi | donj | nizi
+K: Zaglavlje (header) = zaglavlj | header
+K: Trailer = trailer | tailer | podnozj
+K: Kontrolne informacije = kontroln
+K: Segmentacija = segment
+PRAG: 3
+O: Enkapsulacija je proces u kojem se podaci prebacuju iz gornjeg sloja u donji sloj, a svaki sloj dodaje snop informacija - zaglavlje (header) zajedno sa stvarnim podacima.
+O: Forma podatka sa višeg sloja se enkapsulira sa kontrolnim informacijama (header i trailer) u novu formu podatka.
+O: Koraci: nastajanje podataka, pakovanje za transport (segmentacija na transportnom sloju), itd.
+---
+
+P: Enkapsulacija u OSI modelu - opiši slojeve.
+K: Aplikacijski = aplikac
+K: Prezentacijski = prezentac
+K: Sesijski = sesij
+K: Transportni = transport
+K: Mrežni = mrezn | network
+K: Data link (sloj veze) = data link | veze podataka | sloj veze
+K: Fizički = fizick
+PRAG: 5
+O: Aplikacijski sloj - pruža mrežne usluge aplikacijama (npr. FTP).
+O: Prezentacijski sloj - osigurava da podaci budu čitljivi (formatiranje, sintaksa, ASCII/EBCDIC).
+O: Sesijski sloj - uspostavlja, održava i prekida sesije između aplikacija.
+O: Transportni sloj - pouzdan prenos, otkrivanje grešaka, virtualni krugovi (TCP).
+O: Mrežni sloj - odabir najbolje putanje i logičko adresiranje (IP), best effort dostava.
+O: Data link sloj - pouzdan prenos preko medija, fizičko adresiranje; podslojevi LLC i MAC.
+O: Fizički sloj - električne, mehaničke, proceduralne i funkcionalne specifikacije fizičkog linka.
+---
+
+P: Sloj veze podataka (Data Link Layer)?
+K: Formiranje okvira = formiranje okvir | okvir | frame
+K: Kontrola toka = kontrol toka | tok podat
+K: Detekcija i ispravljanje grešaka = detekc | gresk | grešk
+K: Kapsulira pakete iz mrežnog sloja = kapsul | paket
+K: Header, payload, trailer = header | zaglavlj | payload | trailer
+PRAG: 3
+O: Sloj koji kontroliše svaki uređaj u komunikaciji i obezbjeđuje formiranje okvira, kontrolu toka podataka, detekciju i eventualno ispravljanje grešaka.
+O: Operiše sa okvirima (frames) - preuzima pakete od mrežnog sloja i kapsulira ih u okvire pogodne za prenos.
+O: Svaki okvir sadrži zaglavlje (header), polje za korisničke podatke (payload) i završni blok okvira (trailer).
+---
+
+P: Uloga transportnog sloja?
+K: Prihvata podatke od aplikacije = aplikac
+K: Priprema za slanje = priprem | slanj
+K: Segmentacija = segment | dijelic | dijel
+K: Ponovno sastavljanje na destinaciji = destinac | ponovo | sastav | rekonstru
+K: Zna koja aplikacija (portovi) = koje aplikac | port
+PRAG: 3
+O: Transportni sloj prihvata podatke od aplikacije i priprema ih za slanje putem mreže.
+O: Na izvorišnoj strani dijeli aplikacijske podatke na veliki broj dijelića (segmentacija).
+O: Na destinaciji te dijeliće ponovo predstavlja aplikaciji u izvornoj formi; mora znati koji podaci dolaze od koje aplikacije.
+---
+
+P: Šta je switching (komutacija)?
+K: Usmjeravanje bita između uređaja = usmjer | umjer | prosljedj
+K: Komutacija kola = kola | circuit
+K: Komutacija paketa = paket | packet
+PRAG: 2
+O: Switching je usmjeravanje bita od jednog do drugog uređaja na putanji do krajnje destinacije.
+O: Dvije osnovne tehnike su komutacija kola (circuit switching) i komutacija paketa (packet switching).
+---
+
+P: Šta je komutacija kola, a šta komutacija paketa?
+K: Kola - telefonska mreža = telefon
+K: Kola - veća količina podataka, definisano kašnjenje = velik | kolicin | definis
+K: Paketi - sekvencijalni broj i adresa = sekvenc | adres
+K: Store-and-forward = store
+K: Povremen prenos = povremen
+K: Virtualna kola i datagrami = virtual | datagram
+PRAG: 3
+O: Komutacija kola obezbjeđuje svakom korisniku konektivnost; pogodnija je za prenos veće količine podataka uz definisano kašnjenje (primjer: telefonska mreža).
+O: Kod komutacije paketa poruka se dijeli na pakete označene sekvencijalnim brojem i adresom odredišta; mreže koriste store-and-forward transmisiju.
+O: Komutacija paketa je pogodnija za povremeni prenos podataka i koristi virtualna kola ili datagrame.
+---
+
+P: Šta su virtuelna kola, a šta datagrami?
+K: VK - putanja uspostavljena prije slanja = prije slanj | uspostav
+K: VK - svi paketi istom stazom = istom staz | isti put
+K: VK - ispravan redoslijed = ispravn | redoslijed
+K: Datagram - svaki paket neovisno = neovisn | nezavisn
+K: Datagram - različite staze / pogrešan redoslijed = razlicit | pogresn
+PRAG: 3
+O: Virtualno kolo - prije slanja se uspostavlja putanja od izvora do odredišta; svi paketi idu istom stazom i stižu u ispravnom redoslijedu.
+O: Datagram - svaki paket se prenosi neovisno i može ići različitom stazom, pa paketi mogu stići u pogrešnom redoslijedu; ruter nezavisno prosljeđuje svaki paket.
+---
+
+P: Multipleksiranje?
+K: Različiti tokovi istim linkom = istim | isti fizick | razlicit tok
+K: Statističko multipleksiranje = statist | statick
+K: FDM (dijeljenje frekvencija) = fdm | frekvenc
+K: TDM (dijeljenje vremena) = tdm | vremen | slot
+K: Primjer kablovska TV = kablovsk | tv
+PRAG: 3
+O: Multipleksiranje je prenos različitih tokova informacija istim fizičkim linkom.
+O: Statističko multipleksiranje - svaki paket nosi labelu toka kojem pripada.
+O: FDM - svakom kanalu se dodjeljuje zaseban frekventni opseg (npr. kablovska TV).
+O: TDM - vrijeme korištenja linka se dijeli na vremenske slotove dodijeljene kanalima.
+---
+
+P: Šta je višestruki pristup (Multiple Access)?
+K: Više čvorova na dijeljenom mediju = vise cvor | veci broj | dijeljen
+K: Jedan čvor emituje u datom trenutku = samo jedan | jedan cvor
+K: Kolizija = kolizij
+K: Slučajni pristup = slucajn | random
+K: Predavanje tokena = token
+PRAG: 3
+O: Višestruki pristup omogućava većem broju čvorova pristup dijeljenom mediju radi prenosa podataka (mreže sa komutacijom paketa).
+O: U svakom momentu samo jedan čvor može emitovati - ako dva pristupe istovremeno, nastaje kolizija.
+O: Najčešće metode: slučajni pristup (Random Multiple Access) i predavanje tokena (Token Passing).
+---
+
+P: 10BASE-T?
+K: 10 Mb/s = 10 mb | 10mb | 10 mega
+K: Baseband = baseband | base
+K: Uvrnute parice (twisted) = upredn | uvrnut | twist | paric
+K: 100 m = 100 m | 100m
+K: Centralni hub = hub | razvodnik
+PRAG: 3
+O: Prva varijanta Etherneta za rad na 10 Mb/s, koristi neoklopljene uvrnute parice treće kategorije; maksimalni segment je 100 m.
+O: 10 - 10 Mb/s, BASE - baseband signal, T - twisted (uvrnute parice).
+O: Kablovi iz svih stanica vode do centralnog razvodnika (hub).
+---
+
+P: 10BASE2?
+K: 10 Mbps = 10 mb | 10mb
+K: Baseband = baseband
+K: 185 m (blizu 200 m) = 185 | 200
+K: Tanki koaksijalni (thinnet) = thin | tank | koaks
+K: BNC konektori = bnc
+K: Terminator = terminator
+PRAG: 3
+O: Propusnost 10 Mbps, baseband signal na udaljenosti do 185 m (blizu 200 m - otud 2).
+O: Koristi tanju izvedbu koaksijalnog kabla (thinnet) sa BNC konektorima (T BNC konektor).
+O: Terminator na kraju apsorbuje signale da se ne odbiju i ne prave smetnje.
+---
+
+P: 10BASE5?
+K: 10 Mbps = 10 mb | 10mb
+K: 500 m = 500
+K: Debeli koaksijalni (thicknet) = thick | debel | koaks
+K: Transiver / vampire tap = transiver | vampir
+K: AUI = aui
+K: Pravilo 5-4-3 = 5-4-3 | 543
+PRAG: 3
+O: Propusnost 10 Mbps, baseband signal do 500 m, koristi debeli koaksijalni kabl (thicknet).
+O: Transiveri ("vampire tap") spajaju računar na aktivni kabl zarezivanjem izolacije; spajali su se sa nodovima preko AUI priključka.
+O: Imala je ograničenje poznato kao pravilo 5-4-3; problem je bila debljina kabla.
+---
+
+P: Objasni pojam magistrala (bus).
+K: Najjednostavniji vid = jednostav
+K: Pravolinijski = pravolinij | segment | kicm
+K: Prihvata samo onaj kome je namijenjena = samo onaj | namijenj | namenj
+K: Samo jedan host šalje = samo jedan | jedan host
+K: Prekid magistrale ruši mrežu = prekid | neupotrebljiv
+PRAG: 3
+O: Magistrala je najjednostavniji vid povezivanja - kičma/segment koji sve računare povezuje pravolinijski.
+O: Signal se prostire od predajnika prema svima, a prihvata ga samo onaj kome je namijenjen; u datom trenutku samo jedan host može slati.
+O: Prekid magistrale čini mrežu neupotrebljivom, a kvar računara ne ometa ostatak mreže.
+---
+
+P: Topologija zvijezde?
+K: Centralna komponenta (hub/switch) = central | hub | switch | koncentrator
+K: Sav saobraćaj prolazi kroz centar = sav saobracaj | cjelokupn | prolazi
+K: Lako dodavanje uređaja = dodavanj | lako
+K: Pad centralnog uređaja ruši mrežu = pokvari | pad | prekid
+K: Više kabla, skuplja = vise kabl | skuplj
+PRAG: 3
+O: Računari se kablovima povezuju sa centralnom komponentom (hub/switch) kroz koju prolazi sav saobraćaj.
+O: Prednosti: najjednostavnija za implementaciju, lako dodavanje uređaja bez prekida, lako otkrivanje grešaka.
+O: Nedostaci: zagušenja, više kabla, skuplja; ako se hub/switch pokvari, cijela mreža je u prekidu.
+---
+
+P: Topologija prstena?
+K: Kružno povezani = kruzn | prsten | krug
+K: Signal u jednom smjeru = jednom smjer | jednom smer
+K: Aktivna topologija - signal se regeneriše = regeneri | aktivn
+K: Otkaz jednog računara ruši mrežu = otkaz | pad cijel
+K: Predavanje tokena = token
+PRAG: 3
+O: Računari se kružno povezuju kablom, signal putuje u jednom smjeru i prolazi kroz svaki računar.
+O: Aktivna topologija - signal se regeneriše; otkazivanje jednog računara uzrokuje pad cijele mreže.
+O: Jedan od načina predaje podataka u prstenu je predavanje tokena.
+---
+
+P: Topologija mesh?
+K: Pouzdana komunikacija = pouzdan
+K: Sigurna = sigurn
+K: Skupa implementacija = skup
+K: Redundantne veze = redundant | vise veza | svaki sa svakim
+PRAG: 2
+O: Mesh topologija se koristi kada je glavni preduslov pouzdana komunikacija između čvorova u mreži.
+O: To je sigurna, ali skupa implementacija (redundantne veze).
+---
+
+P: Šta je centralizovana, a šta decentralizovana (distribuirana) mreža?
+K: Mainframe (host) i terminali = mainframe | terminal
+K: Sav posao obavlja host = sav posao | host racunar
+K: Distribuirana - dva ili više računara = dva ili vise | distribu
+K: Povezani komunikacijskim medijem = medij
+PRAG: 3
+O: Centralizovana (host bazirana) mreža se sastoji od mainframe računara (host) i terminala; sav posao obavlja host računar.
+O: Distribuirana mreža se sastoji od dva ili više računara povezanih komunikacijskim medijem (npr. povezivanje dvije host bazirane mreže).
+---
+
+P: Šta je mrežni adapter (NIC)?
+K: Fizička veza računara i kabla = fizick | veza
+K: Priprema/enkodira podatke = enkodir | priprem
+K: Kontroliše protok = protok | kontrol
+K: MAC adresa (48 bita) = mac
+K: Drugi sloj OSI = 2. sloj | drugom sloj | sloju 2 | sloj 2
+K: Konektori RJ-45, BNC, AUI = rj | bnc | aui
+PRAG: 3
+O: Mrežni adapter je fizička veza između računara i mrežnog kabla - priprema podatke (enkodiranje bita u signal), šalje ih i kontroliše protok podataka.
+O: Važan element je jedinstvena MAC adresa (48-bitna, dodjeljuje IEEE) zbog koje radi na 2. sloju OSI modela.
+O: Ima RJ-45, BNC i/ili AUI konektore i LED diode; najčešće brzine 10/100/1000 Mbps.
+---
+
+P: CSMA/CD?
+K: Carrier Sense (osluškivanje) = oslusk | carrier sense
+K: Multiple Access = multiple access | pristup
+K: Collision Detection = detekc | detect | otkriv
+K: JAM signal = jam
+K: Čekanje prije ponovnog slanja (backoff) = ceka | backoff | razdoblj
+K: Ethernet = ethernet
+PRAG: 4
+O: CSMA/CD (Carrier Sense Multiple Access with Collision Detection) je MAC protokol lokalnih (Ethernet) mreža.
+O: Čvor osluškuje da li je link zauzet; ako je slobodan pristupa mu i prati da li je došlo do kolizije.
+O: Ako dođe do kolizije prekida slanje, šalje JAM signal i čeka neko vremensko razdoblje prije ponovnog slanja.
+O: Da bi sve stanice osjetile koliziju, transmisija traje bar slot time (dvostruko vrijeme propagacije).
+---
+
+P: CSMA/CA?
+K: Collision Avoidance (izbjegavanje) = izbjeg | avoid | izbeg
+K: Najava slanja ostalim čvorovima = signal | najav
+K: Bežične mreže 802.11 = bezic | wireless | 802.11 | wifi
+K: Ne može detektovati koliziju = ne moze detekt | ne mogu detekt
+K: Čvorovi izvan dometa = doseg | domet
+PRAG: 3
+O: CSMA/CA (Collision Avoidance) - čvor prvo šalje signal ostalima da će početi slanje, kako bi se izbjegla kolizija; odredište često javlja da je spremno.
+O: Koristi se u bežičnim mrežama (802.11) jer čvor koji emituje ne može detektovati koliziju, a neki čvorovi mogu biti izvan dometa.
+---
+
+P: Šta je bandwidth?
+K: Maksimalna količina informacija = maksimal | najvec
+K: U datom vremenskom periodu = vremensk | vrijeme
+K: Bits per second (bps) = bps | bita u sekund | bit po sekund
+K: Nije neograničen ni besplatan = neogranic | besplat
+PRAG: 2
+O: Bandwidth je maksimalna količina informacija koja može "proticati" kroz mrežu u datom vremenskom periodu; nije neograničen i nije besplatan.
+O: Osnovna jedinica je bit u sekundi (bps).
+---
+
+P: Šta je throughput?
+K: Mjera količine informacija = mjer | kolicin
+K: Kroz mrežu u datom periodu = vremensk | period
+K: Zavisi od uređaja, topologije, broja korisnika = zavisi | uredjaj | topolog | korisnik | doba dana
+PRAG: 2
+O: Throughput je mjera stvarne količine informacija koje prolaze kroz mrežu u datom vremenskom periodu.
+O: Zavisi od mrežnih uređaja, tipa podataka, topologije, broja korisnika, korisničkih i serverskih računara i doba dana.
+---
+
+P: Skup primitiva (operacija)?
+K: Usluge sloja višem sloju = visem | visi | usluge
+K: LISTEN = listen
+K: CONNECT = connect
+K: RECEIVE = receive
+K: SEND = send
+K: DISCONNECT = disconnect
+PRAG: 4
+O: Skup osnovnih operacija (primitiva) su usluge koje sloj pruža sloju višeg nivoa; ovisi o vrsti usluge.
+O: Primitive: LISTEN, CONNECT, RECEIVE, SEND, DISCONNECT.
+---
+
+P: Objasni LLC podsloj.
+K: Gornji podsloj sloja linka = gornj
+K: Upravljačke komande linka = upravljack | komand
+K: Isti za različite medije = isti | razlicit medij
+K: Interfejs za viši sloj = interfejs | visi sloj
+K: Multipleksiranje protokola = multipleks
+K: Tri tipa usluge = tri tip | nekonektivn | konektivn
+PRAG: 3
+O: LLC je gornji podsloj sloja linka podataka - generiše i interpretira upravljačke komande linka, isti je za različite fizičke medije i daje interfejs višem sloju.
+O: Uspostavlja i prekida vezu, upravlja saobraćajem okvira, sekvenciranjem i potvrđivanjem; multipleksira protokole i upravlja tokom i greškama.
+O: Pruža tri tipa usluge: nekonektivni bez potvrde, konektivni i nekonektivni sa potvrdom.
+---
+
+P: Šta je nekonektivni servis bez potvrde?
+K: Ne uspostavlja logičku vezu = ne uspostav | bez vez | logick
+K: Ne potvrđuje prijem = ne potvrd | bez potvrd
+K: Bez upravljanja tokom i greškama = tok | greska | gresk
+PRAG: 2
+O: Ne uspostavlja logičku vezu sa drugim LLC podslojem, ne potvrđuje prijem LLC okvira, niti upravlja tokom podataka i greškama.
+---
+
+P: Šta je konektivni servis?
+K: Uspostavlja logičku vezu = uspostav | logick
+K: Ispravan redoslijed = redoslijed | ispravn
+K: Upravlja protokom i greškama = protok | tok | gresk
+PRAG: 2
+O: Uspostavlja logičku vezu sa drugim LLC podslojem, preko koje se razmjenjuju okviri u ispravnom redoslijedu, uz upravljanje protokom podataka i greškama.
+---
+
+P: Šta je nekonektivni servis sa potvrdom?
+K: Ne uspostavlja logičku vezu = ne uspostav | bez vez
+K: Potvrđuje prijem = potvrd
+K: Otklanjanje grešaka i redoslijed = gresk | redoslijed
+PRAG: 2
+O: Ne uspostavlja logičku vezu sa drugim LLC podslojem, ali se potvrđuje prijem LLC okvira radi otklanjanja grešaka i uspostavljanja ispravnog redoslijeda.
+---
+
+P: MAC adresa?
+K: Jedinstvena fizička adresa = jedinstven | fizick
+K: 48 bita = 48
+K: 12 heksadecimalnih brojeva = 12 | heksa | hexa
+K: OUI (prvih 6, proizvođač) = oui | proizvodj
+K: IEEE = ieee
+K: Uređaj 2. sloja = 2. sloj | drug sloj | ii sloj | sloja 2
+PRAG: 3
+O: MAC adresa je jedinstvena fizička adresa računara utisnuta na mrežnoj kartici - 48 bita, zapisana sa 12 heksadecimalnih brojeva.
+O: Prvih 6 heksadecimalnih brojeva dodjeljuje IEEE proizvođaču (OUI), a posljednjih 6 je serijski broj kartice.
+O: Uređaj koji radi na osnovu MAC adresa je uređaj II sloja; formati MAC-48, EUI-48, EUI-64.
+---
+
+P: Objasni MAC podsloj.
+K: Formatira jedinice podataka = formatir
+K: Pristup mediju = pristup medij
+K: Razgraničava okvire = razgranic | okvir
+K: Prepoznaje adrese = adres
+K: Bez logičke veze = bez logick | bez ostvaren
+K: Direktno sa NIC = nic | mrezn kart
+PRAG: 3
+O: MAC podsloj formatira jedinice podataka i omogućava pristup mediju, obavljajući funkcije prenosa okvira bez ostvarenja logičke veze.
+O: Upravlja pristupom mediju, razgraničava okvire i prepoznaje adrese, obezbjeđuje NIC-ovima dijeljeni pristup fizičkom sloju i direktno komunicira sa NIC-om.
+---
+
+P: Osnovne funkcije MAC podsloja?
+K: Ograničavanje i prepoznavanje okvira = ogranic | prepozn | okvir
+K: Adresiranje odredišta = adresir
+K: Informacija o pošiljaocu = posiljao | posiljal
+K: Transparentan prenos LLC PDU = llc | transparent
+K: Zaštita od grešaka = zastit | gresk
+K: Upravljanje pristupom mediju = pristup
+PRAG: 4
+O: Ograničavanje i prepoznavanje okvira; adresiranje odredišta (pojedinačno ili grupe); prenos informacije o pošiljaocu.
+O: Transparentan prenos LLC PDU; zaštita od grešaka u prenosu; upravljanje pristupom fizičkom mediju; sistem jedinstvenih adresa.
+---
+
+P: ARP/RARP?
+K: Address Resolution Protocol = address resolution | arp
+K: Za IP adresu dobija MAC = ip
+K: MAC adresa = mac
+K: ARP cache = cache | kes | memoris
+PRAG: 3
+O: ARP (Address Resolution Protocol) je protokol kojim se za datu IP adresu dobija MAC adresa (RARP obrnuto).
+O: Parovi IP-MAC se čuvaju u ARP cache-u, pa host ne mora ponovo slati ARP zahtjev.
+---
+
+P: Ethernet LAN kao 802.3 standard?
+K: IEEE 802.3 = 802.3
+K: Fizička topologija zvijezde = zvijezd | zvezd
+K: Broadcast logička topologija = broadcast
+K: CSMA/CD = csma
+K: DEC, Xerox, Intel = xerox | intel | dec
+K: Implementacije 10BaseT, 100BaseTX... = 10base | 100base | 1000base
+PRAG: 3
+O: LAN koji radi po IEEE 802.3 standardu naziva se Ethernet LAN; najčešće je fizička topologija zvijezde, logička broadcast, a MAC protokol CSMA/CD.
+O: Razvili su ga DEC, Xerox i Intel, a IEEE formalizovao kao 802.3 (1985).
+O: Najčešće implementacije: 10BaseT, 100BaseTX, 100BaseFX, 1000BaseSX.
+---
+
+P: 802.5 (Token Ring)?
+K: Fizički prsten = prsten
+K: Jedan smjer = jednom smjer | jedan smjer
+K: Token daje pravo slanja = token
+K: Prosljeđuje narednom čvoru = prosljedj | narednom
+K: Ispad stanice ruši mrežu = ispad | neupotrebljiv
+PRAG: 3
+O: Token Ring povezuje stanice u fizički prsten, podaci se prenose u jednom smjeru.
+O: Stanica koja posjeduje token ima pravo slanja; primljene podatke prosljeđuje narednom čvoru kopirajući one adresirane za nju.
+O: Ispad jedne stanice čini mrežu neupotrebljivom.
+---
+
+P: Šta se desi kada u web browser ukucamo neku URL adresu?
+K: Ukucava se ime domene = ime domen | domen
+K: Treba IP adresa servera = ip
+K: Zahtjev DNS serveru = dns
+K: Zahtjev za stranicom web serveru = web server | zahtjev za stranic
+K: Browser prikaže stranicu = prikaz | prezent | stranic
+PRAG: 3
+O: Korisnik ukucava ime domene, što je zahtjev za komunikacijom sa web serverom, ali računar ne zna IP adresu servera.
+O: Šalje upit DNS serveru koji vraća IP adresu povezanu sa domenom.
+O: Računar šalje zahtjev za stranicom na tu IP adresu, a web server vraća sadržaj koji browser prikazuje kao web stranicu.
+---
+
+P: Šta predstavlja ping?
+K: Komanda = komand
+K: Testiranje end-to-end konektivnosti = end to end | konektivn | test
+K: IP adresa računara = ip
+K: Da li je računar aktivan = aktivan | spojen
+PRAG: 2
+O: Ping je komanda koja omogućava testiranje end-to-end konektivnosti.
+O: U komandnom promptu se ukuca ping sa IP adresom računara da se provjeri da li je aktivan i spojen na mrežu.
+---
+
+P: Reci sve što znaš o optičkim kablovima.
+K: Velike udaljenosti = udaljenost | daljin
+K: Velika širina opsega = sirin | opseg | bandwidth
+K: Backbone / WAN = backbone | wan
+K: Svjetlost = svjetl | svetl
+K: Konverzija električni-svjetlosni = konverz | elektric
+PRAG: 3
+O: Optički kablovi se koriste za spajanje lokacija na većim udaljenostima gdje je potrebna velika širina opsega (LAN backbone, WAN).
+O: Optički medij koristi svjetlost za prenos podataka.
+O: Predajnik pretvara električne signale u svjetlosne, a prijemnik svjetlosne nazad u električne.
+---
+
+P: Šta je singlemod, a šta multimod optičko vlakno?
+K: Razlika u prečniku jezgra = precnik | jezgr
+K: Multimod - više putanja = vise | putanj
+K: Multimod - jeftiniji, kraće razdaljine = jeftin | krac
+K: Singlemod - jedan snop svjetlosti = jedan snop | jednom snop | jedan zrak
+K: Singlemod - duže relacije, skuplji = duz | skuplj
+PRAG: 3
+O: Razlika je u prečniku jezgra optičkog vlakna.
+O: Multimod - jezgro dovoljno veliko za više optičkih putanja; jeftiniji, ali nije dobar za veće razdaljine.
+O: Singlemod - mnogo manji prečnik jezgra, samo jedan snop svjetlosti; koristi se na dužim relacijama, ali je skuplji.
+---
+
+P: Šta znate o TCP/IP-u?
+K: DoD (ministarstvo odbrane) = dod | ministarstv | odbran
+K: Pouzdan pod svim uslovima / nuklearni rat = nuklear | svim uslov | pouzdan
+K: Open standard = open | otvoren
+K: Komunikacija svih platformi = platform
+K: 4 sloja = 4 sloj | cetiri sloj
+K: Aplikacijski, transportni, internet, mrežni pristup = aplikac | transport | internet | pristup
+PRAG: 3
+O: TCP/IP model je kreiralo američko ministarstvo odbrane (DoD) za mrežu koja radi u svim uslovima, uključujući nuklearni rat.
+O: Razvijen je kao open standard, što je omogućilo komunikaciju svih platformi (Linux/Unix, Windows, MacOS).
+O: Ima 4 sloja: aplikacijski, transportni, internet i mrežni pristupni sloj.
+---
+
+P: Ethernet?
+K: Xerox PARC = xerox
+K: 3 Mbps, adrese 8 bita = 3 mb | 3mb | 8 bit
+K: DIX 10 Mbps = dix | 10 mb | 10mb
+K: IEEE 802.3 = 802.3
+K: CSMA/CD = csma
+K: Fast Ethernet (100 Mbps) = fast | brzi
+PRAG: 3
+O: Ethernet je razvio Xerox PARC - brzina 3 Mbps, adrese od 8 bita; DIX (DEC, Intel, Xerox) 1980. objavljuje 10 Mbps specifikaciju.
+O: IEEE 802.3 je obuhvatio većinu originalne specifikacije; Ethernet LAN ima broadcast logičku topologiju i koristi CSMA/CD.
+O: Implementacije se razlikuju po mediju, brzini, kodiranju, udaljenosti i broju čvorova; 100 Mbps se zove Fast Ethernet.
+---
+
+P: Šta je Ethernet II?
+K: Frame u TCP/IP mrežama = tcp
+K: Preamble = preamble | preambul
+K: SOF delimiter = sof | delimiter
+K: Destination / source address = destination | source | odredisn | izvorisn
+K: Length/Type = length | type
+K: FCS = fcs
+PRAG: 3
+O: Ethernet II je Ethernet frame koji se koristi u TCP/IP mrežama.
+O: Polja: Preamble, SOF Delimiter, Destination Address, Source Address, Length/Type, Header and Data, FCS.
+---
+
+P: Komutirani Ethernet?
+K: Jezgro je svič = svic | switch
+K: Backplane povezuje priključke = backplane | osnovn ploc
+K: Svaka stanica svoj kabl = svoj vlastit | svoj kabl
+K: Centralni hub = hub | habu
+PRAG: 2
+O: Jezgro sistema je svič čija brza osnovna ploča (backplane) povezuje sve priključke.
+O: Umjesto jednog dugačkog zajedničkog kabla, svaka stanica ima vlastiti kabl do centralnog uređaja (ranije hub, danas svič).
+---
+
+P: Vrste mreža - o svakoj napisati nešto.
+K: Ethernet = ethernet
+K: FDDI = fddi
+K: Token Ring = token
+K: Frame Relay = frame relay
+K: Wi-Fi = wi-fi | wifi | bezic
+PRAG: 4
+O: Ethernet - LAN tehnologija zasnovana na frame-ovima, potisnula Token Ring i FDDI.
+O: FDDI - ANSI protokoli preko optičkog vlakna, token mreža do 100 Mbps, osnova WAN mreža.
+O: Token Ring - mreža poredana u krug (IBM, IEEE 802.5).
+O: Frame Relay - sinhronizovana mreža na HDLC protokolu, povezuje LAN i WAN.
+O: Wi-Fi - bežično umrežavanje pomoću radio frekvencija i antena (WLAN).
+---
+
+P: Šta je bit time?
+K: Vrijeme za jedan bit = jedan bit | jednog bit
+K: Postavljanje na medij = medij | postav | generis
+K: Različit za implementacije = razlicit
+PRAG: 2
+O: Bit time je vrijeme potrebno da se jedan bit "postavi" na medij, tj. vrijeme generisanja jednog bita na mreži; različit je za različite implementacije.
+---
+
+P: Šta je interframe spacing?
+K: Minimalni razmak između dva frame-a = minimal | razmak
+K: Priprema mrežne kartice = priprem | kartic
+K: 96 bit time = 96
+K: Manje = više kolizija = kolizij
+PRAG: 2
+O: Interframe spacing je minimalni vremenski razmak između transmisije dva frame-a - 96 bit time-a.
+O: Potreban je da se mrežna kartica pripremi za naredni frame i da drugi hostovi mogu slati; smanjenje bi povećalo broj kolizija.
+---
+
+P: Šta je slot time?
+K: Minimalno trajanje transmisije = minimal | trajanj
+K: Signal stiže do najudaljenijeg segmenta = najudaljen | udaljen
+K: Kartica još emituje = emitov | jos ne prestan
+PRAG: 2
+O: Slot time definiše minimalno trajanje transmisije - signal mora stići do najudaljenijeg segmenta mreže dok mrežna kartica još emituje.
+---
+
+P: Koji su uređaji 1. nivoa i reci nešto o njima.
+K: Repeater = repeater | ripiter | repetitor
+K: Regeneriše signal = regener | pojac
+K: Hub = hub
+K: Prosljeđuje na sve portove = sve port | svim port
+K: Aktivni, pasivni, inteligentni = aktivn | pasivn | inteligent
+PRAG: 3
+O: Repeater - signal koji primi regeneriše i prosljeđuje u naredni segment.
+O: Hub - signal primljen na jedan port prosljeđuje na sve ostale portove (broadcast uređaj / multiport repeater).
+O: Hubovi mogu biti aktivni, pasivni i inteligentni.
+---
+
+P: Koji su uređaji 2. nivoa i reci nešto o njima.
+K: Bridge = bridge | most
+K: Destinacijske MAC adrese = mac
+K: Spaja heterogene mreže = heterogen
+K: Switch = switch | svic
+K: Mikrosegmentacija / kolizijska domena po portu = mikrosegment | kolizijsk
+K: Baferovanje = bafer | memorij
+PRAG: 3
+O: Bridge - rad bazira na destinacijskim MAC adresama i može spajati heterogene mreže (Ethernet i Token Ring).
+O: Switch - radi mikrosegmentaciju: svaki port je zaseban kolizijski domen, pa nema kolizija; okvire šalje samo odredišnim portovima.
+O: Svič omogućava istovremeno slanje više stanica i koristi memoriju za baferovanje okvira; zove se i multiport bridge.
+---
+
+P: Opiši 3 metode kod switcha.
+K: Store and forward = store
+K: Provjera ispravnosti, najveća latencija = najpouzdan | latenc | provjer
+K: Cut through = cut
+K: Šalje čim sazna MAC = cim sazna | destinacijsk | 6 bajt | 6 byt
+K: Fragment free = fragment
+K: Prvih 64 bajta = 64
+PRAG: 4
+O: Store and forward - switch primi cijeli frame, provjeri ispravnost pa ga prosljeđuje; najpouzdanija ali sa najvećom latencijom.
+O: Cut through - prosljeđuje čim sazna destinacijsku MAC adresu (prvih 6 bajta); minimalna latencija, bez provjere grešaka.
+O: Fragment free - kompromis: provjerava prvih 64 bajta frame-a prije prosljeđivanja (tu se dešava najviše grešaka).
+---
+
+P: Koji su uređaji 3. sloja?
+K: Ruter = ruter | router
+K: End-to-end konektivnost = end to end | konektivn
+K: Prosljeđivanje paketa i najbolji put = prosljedj | najbolj
+K: Routing tabela = tabel
+K: Gateway = gateway
+K: Komponente RAM, NVRAM, FLASH, ROM = ram | flash | rom
+PRAG: 3
+O: Treći sloj osigurava end-to-end konektivnost; uređaji 3. sloja su ruteri.
+O: Primarna funkcija rutera je prosljeđivanje paketa i selekcija najboljeg puta pomoću routing tabele (mreže i interfejsi).
+O: Ruter je najčešće gateway; ima komponente CPU, RAM, NVRAM, FLASH, ROM, interfejse i konzolu; spaja LAN i WAN mreže.
+---
+
+P: Šta je RAM routera?
+K: Routing tabela = routing tabel | ruting tabel
+K: Buffering paketa = buffer | bafer
+K: OS se dekompresuje u RAM = dekompres | ios | operativ
+K: Gubi sadržaj po gašenju = gub | privremen | volatil
+K: ARP cache = arp
+K: Trenutna konfiguracija = trenutn | running
+PRAG: 4
+O: RAM routera pohranjuje routing tabelu, ARP cache, fast-switching cache i trenutnu konfiguraciju (running-config).
+O: Vrši buffering paketa i održava redove paketa; u njega se dekompresuje i učitava operativni sistem (IOS).
+O: Po gašenju routera sadržaj RAM-a se gubi (privremena memorija).
+---
+
+P: NVRAM routera?
+K: Startup konfiguracija = startup
+K: Trajna memorija = trajn | ne gub | non-volatil | nevolatil
+K: Primjenjuje se kad se router upali = upali | pokret
+PRAG: 2
+O: NVRAM čuva startup konfiguracijski fajl - konfiguraciju koja se primijeni kada se router upali.
+O: NVRAM je trajna memorija - sadržaj se ne gubi ni nakon gašenja.
+---
+
+P: Opiši Flash memoriju kod routera.
+K: Kompresovana IOS slika = ios
+K: Update bez zamjene čipa = update | bez uklanjanj | cip
+K: Čuva sadržaj bez napajanja = napajanj | trajn | cuva sadrzaj
+K: Više verzija IOS-a = vise verzij
+K: EEPROM = eeprom
+PRAG: 3
+O: Flash čuva kompresovanu IOS sliku i dozvoljava update IOS-a bez uklanjanja ili zamjene čipa.
+O: Čuva sadržaj i kada prestane napajanje; zavisno od veličine može čuvati više verzija IOS-a.
+O: U pitanju je EEPROM tip memorije.
+---
+
+P: Šta je ROM routera?
+K: Read Only = read only | samo cit
+K: Dijagnostičke rutine (POST) = post | dijagnost
+K: Bootstrap = bootstrap
+K: Osnovni (krnji) OS za oporavak = krnj | recovery | oporav | osnovn operativ
+PRAG: 3
+O: ROM (Read Only Memory) sadrži dijagnostičke rutine (POST).
+O: Pohranjuje BOOTSTRAP program i osnovni (krnji) operativni sistem za situacije poput korumpiranog IOS-a, password i system recovery-a.
+---
+
+P: Kako dijelimo mreže sa aspekta geografskog područja?
+K: PAN = pan
+K: LAN = lan
+K: MAN = man
+K: WAN = wan
+K: Primjeri dometa (10 m, zgrada, grad, država) = 10 m | zgrad | grad | drzav | kontinent
+PRAG: 4
+O: PAN - personalna mreža na kratkim udaljenostima (do ~10 m), npr. Bluetooth, USB.
+O: LAN - lokalna mreža ograničenog prostora (kuća, zgrada, kampus), brzine 100/1000 Mbps.
+O: MAN - gradska mreža koja spaja više LAN-ova (optički linkovi).
+O: WAN - širo geografsko područje (država, kontinent, svijet), oslanja se na ISP-ove, manje brzine od LAN-a.
+---
+
+P: Objasni pojam WAN.
+K: Šire geografsko područje = sir | geografsk
+K: Zakupljene linije = zakup
+K: Serijski linkovi = serijsk
+K: Uređaji 3. sloja (ruter, modem) = ruter | router | modem
+K: ISP = isp | provajd
+K: Manje brzine od LAN-a = manj | sporij
+PRAG: 3
+O: WAN je komunikacijska mreža na širem geografskom području koja spaja udaljene uređaje.
+O: Koristi zakupljene linije komunikacijskih kompanija (serijski linkovi), a za povezivanje mreža uređaje 3. sloja (ruter, modem, komunikacijski server).
+O: Oslanja se na usluge ISP-a, a brzine su obično manje nego u LAN mrežama.
+---
+
+P: Objasni kako se spaja Auxiliary (AUX) port na ruter.
+K: Spajanje modema = modem
+K: Rollover kabl = rollover
+K: RJ-45 – DB-25 = db | rj
+K: Poziv preko telefonske mreže = telefon | poziv
+K: Router djelimično konfigurisan = djelimicn | konfigurisan
+PRAG: 3
+O: Preko AUX porta se spaja modem pomoću rollover kabla (RJ-45 – DB-25).
+O: Administrator se modemom spaja na javnu telefonsku mrežu i poziva drugi modem koji konekciju preusmjerava na AUX port routera.
+O: Za ovakav način spajanja router mora biti djelimično konfigurisan.
+---
+
+P: Spajanje konzolnog (rollover) kabla na router.
+K: Inicijalna konfiguracija = inicijal | konfigur
+K: Konzolni port = konzol
+K: Rollover kabl = rollover
+K: DB-9 / RJ-45 adapter = db | adapter | rj
+K: COM port = com
+PRAG: 3
+O: Za inicijalnu konfiguraciju rollover (konzolni) kabl se spaja u konzolni port routera.
+O: Drugi kraj završava DB-9 konektorom ili RJ-45 (tada treba RJ-45 – DB-9 adapter).
+O: Na računaru se spaja na COM1 ili COM2 i koristi se terminal program.
+---
+
+P: Objasni 5-4-3-2-1 pravilo.
+K: Round trip u granicama = round trip | granic
+K: Pet segmenata = pet segm | 5 segm
+K: Četiri huba/repeatera = cetiri | 4 hub | 4 repe
+K: Tri segmenta sa računarima = tri segm | 3 segm
+K: Dva link segmenta = dva link | 2 link
+K: Jedna kolizijska domena = jedna kolizij | 1 kolizij
+PRAG: 4
+O: Pravilo osigurava da round trip ostane u definisanim granicama:
+O: Pet segmenata medija, četiri huba ili repeatera, tri segmenta na kojima smiju biti računari, dva link segmenta, jedna kolizijska domena.
+---
+
+P: 5-4-3 pravilo?
+K: IEEE 802.3 = 802.3
+K: Detekcija kolizije = kolizij
+K: Maksimalno 5 segmenata = 5 segm | pet segm
+K: 4 repeatera / zvjezdišta = 4 | cetiri
+K: 3 segmenta višespojna (sa nodovima) = 3 segm | tri segm | visespoj
+PRAG: 3
+O: Pravilo 5-4-3 je definisano IEEE 802.3 standardom i osigurava da se kolizija detektuje hardverski.
+O: Između dva čvora može biti maksimalno 5 segmenata spojenih preko 4 repeatera (zvjezdišta), pri čemu samo 3 segmenta smiju imati nodove (višespojna).
+---
+
+P: Crossover kabl?
+K: Ukršteni parovi (1-3, 2-6) = ukrst | zamijenj | 1 sa 3 | prva sa trec
+K: T568A na jednom, T568B na drugom = 568a | 568b
+K: RJ-45 = rj
+K: Hub-hub / računar-računar = hub i hub | dvije radne | racunar na racunar | dva racunar
+PRAG: 3
+O: Kod crossover kabla parovi su na drugom kraju ukršteni (prva sa trećom, druga sa šestom žicom).
+O: Na jednom kraju je raspored T568A, na drugom T568B; svih 8 žica terminira se RJ-45 konektorom.
+O: Koristi se za spajanje istih uređaja: hub-hub, dvije radne stanice, radna stanica-ruter.
+---
+
+P: Straight-through kabl?
+K: Isti standard na oba kraja = isti | oba kraj
+K: Radna stanica - switch = switch | svic
+K: Router - switch = router | ruter
+K: Dvije parice za prenos = dvije paric | 2 paric
+PRAG: 2
+O: Straight-through kabl spaja različite uređaje: radnu stanicu sa switchem, router sa switchem i sl.
+O: Isti standard (npr. 568A) mora biti na oba kraja kabla; za prenos signala koriste se 2 parice.
+---
+
+P: Rollover kabl?
+K: Inverzni raspored = inverz | obrnut
+K: Konfiguracija uređaja = konfigur
+K: Konzolni port = konzol
+PRAG: 2
+O: Rollover kabl na jednom kraju ima jedan standard, a na drugom inverzni (obrnut) raspored žica.
+O: Koristi se kada želimo konfigurisati mrežni uređaj (konzolni port).
+---

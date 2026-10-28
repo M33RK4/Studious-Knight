@@ -2,13 +2,14 @@ Studious Knight - Free-to-Play License
 
 Copyright (c) 2026 M33RK4
 
-Studious Knight (the "Game") is distributed as a ready-to-play program only.
-The Game, including its program files, code, pixel art, graphics, animations,
-maps, sounds, text, game design and all other original materials (together,
-the "Software"), is the exclusive property of M33RK4 (the "Author"). The
-source code is not published and is not part of this release. The Software is
-licensed, not sold. This license does not transfer any ownership of the
-Software to you.
+Studious Knight (the "Game") is distributed as a ready-to-play program, and
+its source code is published in the "source" folder so people can see how it
+works. The Game, including its program files, source code, pixel art,
+graphics, animations, maps, sounds, text, game design and all other original
+materials (together, the "Software"), is the exclusive property of M33RK4
+(the "Author"). Publishing the source code does not make it free to reuse.
+The Software is licensed, not sold. This license does not transfer any
+ownership of the Software to you.
 
 1. FREE TO PLAY
 
@@ -17,7 +18,9 @@ Software to you.
 
    a) download, install and play the Game for free;
    b) edit the question files (the "pitanja" folder) and your own save and
-      settings files for your own studying and play.
+      settings files for your own studying and play;
+   c) read and study the source code, and build it unchanged for your own
+      personal use.
 
 2. RESTRICTIONS
 

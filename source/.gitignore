@@ -1,0 +1,5 @@
+build/
+out/
+.vs/
+StudiousKnight_save*.txt
+StudiousKnight_settings.txt
